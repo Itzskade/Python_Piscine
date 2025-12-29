@@ -13,57 +13,51 @@
 
 import sys
 import math
-from typing import Tuple
 
 def parse_coordinates(string: str):
-    numbers = string.split(',')
-    tmp = []
-    i = 0
     try:
-        while i < 3:
-            tmp.append(int(numbers[i]))
-            i += 1
-    except ValueError as e:
-        print(f"Error parsing coordinates:", e)
-        print(f"Error details - Type: ValueError, Args: (\"{e}\",)")
-    coordinates = tuple(tmp)
-    return coordinates
+        parts = string.split(",")
+        if len(parts) != 3:
+            raise ValueError("Invalid coordinate format")
+        x = int(parts[0])
+        y = int(parts[1])
+        z = int(parts[2])
+        return (x, y, z)
+    except Exception as e:
+        print(f"Error parsing coordinates: {e}")
+        return None
 
-def euclidean_distance(coordinates: tuple):
-    position = (0, 0, 0)
-    x2, y2, z2 = coordinates
-    x1, y1, z1 = position
-    distance = math.sqrt((x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2)
-    return distance
+
+def euclidean_distance(origin: tuple, point: tuple):
+    x1, y1, z1 = origin
+    x2, y2, z2 = point
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
+
 
 def ft_coordinate_system():
     print("=== Game Coordinate System ===\n")
- 
-    position = (0, 0, 0)
-    test1 = "10,20,5"
-    test2 = "3,4,0"
-    test3 = "abc,def,ghi"
-    coordinates1 = parse_coordinates(test1)
-    coordinates2 = parse_coordinates(test2)
- 
-    x, y, z = coordinates2
 
-    print(f"Position created: {coordinates1}")
-    print(f"Distance between {position} and {coordinates1}: {euclidean_distance(coordinates1):.2f}")
-    print()
-    
-    print(f"Parsing coordinates: \"{test2}\"")
-    print(f"Position created: {coordinates2}")
-    print(f"Distance between {position} and {coordinates2}: {euclidean_distance(coordinates2)}")
-    print()
-    
-    print(f"Parsing invalid coordinates: \"{test3}\"")
-    coordinates3 = parse_coordinates(test3)
-    print()
-    
-    print(f"Unpacking demostration:")
-    print(f"Player at x={x}, y={y}, z={z}")
-    print(f"Coordinates: X={x}, Y={y}, Z={z}")
+    origin = (0, 0, 0)
 
-if __name__ == '__main__':
+    if len(sys.argv) <= 1:
+        print("No coordinates provided via command line.\n")
+        return
+
+    for arg in sys.argv[1:]:
+        print(f"Parsing coordinates: \"{arg}\"")
+        pos = parse_coordinates(arg)
+        if pos is None:
+            print()
+            continue
+        x, y, z = pos
+        print(f"Position created: {pos}")
+        d = euclidean_distance(origin, pos)
+        print(f"Distance between {origin} and {pos}: {euclidean_distance(origin, pos):.2f}\n")
+
+    print("Unpacking demonstration:")
+    print(f"Player at x={x}, y ={y}, z={z}")
+    print(f"Coordinates: X={x}, Z={z}, Y={y}")
+
+
+if __name__ == "__main__":
     ft_coordinate_system()
