@@ -13,7 +13,7 @@
 
 import sys
 
-def put_numbers_on_list():
+def put_numbers_on_list() -> int:
     scores = []
     i = 1
     while i < len(sys.argv):
@@ -25,7 +25,7 @@ def put_numbers_on_list():
     return scores
         
 
-def ft_score_analytics():
+def ft_score_analytics() -> None:
     print("=== Player Score Analytics ===")
     scores = put_numbers_on_list()
     if len(sys.argv) < 2:
