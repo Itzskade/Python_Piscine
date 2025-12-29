@@ -13,7 +13,7 @@
 
 import sys 
 
-def data_transmission():
+def data_transmission() -> None:
     archivist_id = input("Input Stream active. Enter archivist ID: ")
     status_report = input("Input Stream active. Enter status report: ")
     print()
@@ -24,7 +24,7 @@ def data_transmission():
     print()
     
 
-def ft_stream_management():
+def ft_stream_management() -> None:
     print("=== CYBER ARCHIVES - COMMUNICATION SYSTEM ===")
     data_transmission()
     print ("Three-channel communication test successful.")
