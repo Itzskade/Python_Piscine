@@ -11,7 +11,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-def recover_data():
+def recover_data() -> None:
     print("Accessing Storage Vault: ancient_fragment.txt")
     print("Connection established...\n")
     print("RECOVERED DATA:")
@@ -20,7 +20,7 @@ def recover_data():
     print(reading)
     file.close()
 
-def ft_ancient_text():
+def ft_ancient_text() -> None:
     print("=== CYBER ARCHIVES - DATA RECOVERY SYYSTEM ===\n")
     recover_data()
     print()
