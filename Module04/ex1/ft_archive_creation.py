@@ -11,14 +11,16 @@
 #                                                                              #
 # **************************************************************************** #
 
-def create_file():
+from typing import TextIO
+
+def create_file() -> TextIO:
     file = open('new_discovery.txt', 'w')
     print("Initializing new storage unit: new_discovery.txt")
     print("Storage unit created successfully...\n")
     return file
 
 
-def write_file(file):
+def write_file(file: TextIO) -> None:
     entries = [
             "New quantum algorith discovered",
             "Efficiency increased by 347 %",
@@ -32,7 +34,7 @@ def write_file(file):
         count += 1
     file.close()
 
-def ft_archive_creation():
+def ft_archive_creation() -> None:
     print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===\n")
     file = create_file()
     write_file(file)
