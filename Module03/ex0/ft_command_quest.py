@@ -13,7 +13,7 @@
 
 import sys
 
-def ft_command_quest():
+def ft_command_quest() -> None:
     print("=== Command Quest ===")
     if len(sys.argv) < 2:
         print("No arguments provided!")
