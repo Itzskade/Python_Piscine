@@ -11,6 +11,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+from typing import Dict, Set
+
 data = {
         'alice': ['first_blood', 'pixel_perfect', 'speed_runner', 'first_blood', 'first_blood'], 
         'bob': ['level_master', 'boss_hunter', 'treasure_seeker', 'level_master', 'first_blood'], 
@@ -20,21 +22,21 @@ data = {
         'frank': ['explorer', 'boss_hunter', 'first_blood', 'explorer', 'first_blood', 'boss_hunter']
 }
 
-def build_player_sets(data):
+def build_player_sets(data: Dict[str, list[str]]) -> Dict[str, Set[str]]:
     player_achievements = dict()
     for name in data:
         player_achievements[name] = set(data[name])
     return player_achievements
 
 
-def compute_achievements(player_achievements):
+def compute_achievements(player_achievements: Dict[str, Set[str]]) -> Set[str]:
     achievements = set()
     for name in player_achievements:
         achievements = achievements.union(player_achievements[name])
     return achievements
 
 
-def compute_common_achievements(player_achievements):
+def compute_common_achievements(player_achievements: Dict[str, Set[str]]) -> Set[str]:
     names = list(player_achievements)
     common = set(player_achievements[names[0]])
     for name in names:
@@ -42,7 +44,7 @@ def compute_common_achievements(player_achievements):
     return common
 
 
-def compute_rare_achievements(player_achievements, achievements):
+def compute_rare_achievements(player_achievements: Dict[str, Set[str]], achievements: Set[str]) -> Set[str]:
     names = list(player_achievements)
     repeated = set()
     for i in range(len(names)):
@@ -52,7 +54,7 @@ def compute_rare_achievements(player_achievements, achievements):
     return rare
 
 
-def ft_achievement_tracker():
+def ft_achievement_tracker() -> None:
     print("=== Achievement Tracker System ===\n")
     
     player_achievements = build_player_sets(data)
