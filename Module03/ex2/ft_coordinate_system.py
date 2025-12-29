@@ -13,12 +13,14 @@
 
 import sys
 import math
+from typing import Optional, Tuple
 
-def parse_coordinates(string: str):
+def parse_coordinates(string: str) -> Optional[Tuple[int, int, int]]:
     try:
         parts = string.split(",")
         if len(parts) != 3:
-            raise ValueError("Invalid coordinate format")
+            print("Error parsing coordinates: Invalid coordinate format")
+            return None
         x = int(parts[0])
         y = int(parts[1])
         z = int(parts[2])
@@ -28,13 +30,13 @@ def parse_coordinates(string: str):
         return None
 
 
-def euclidean_distance(origin: tuple, point: tuple):
+def euclidean_distance(origin: Tuple[int, int, int], point: Tuple[int, int, int]) -> float:
     x1, y1, z1 = origin
     x2, y2, z2 = point
     return math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
 
 
-def ft_coordinate_system():
+def ft_coordinate_system() -> None:
     print("=== Game Coordinate System ===\n")
 
     origin = (0, 0, 0)
