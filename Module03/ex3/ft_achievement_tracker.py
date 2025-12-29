@@ -21,7 +21,7 @@ data = {
 }
 
 def build_player_sets(data):
-    player_achievements = {}
+    player_achievements = dict()
     for name in data:
         player_achievements[name] = set(data[name])
     return player_achievements
