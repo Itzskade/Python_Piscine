@@ -44,7 +44,7 @@ def build_inventory(player_items: dict, catalog: dict) -> dict:
     return inventory
 
 
-def transfer_item(sender: dict, receiver: dict, item_name: str, quantity: int):
+def transfer_item(sender: dict, receiver: dict, item_name: str, quantity: int) -> None:
     sender_inv = sender['inventory']
     item = sender_inv.get(item_name)
 
@@ -69,7 +69,7 @@ def transfer_item(sender: dict, receiver: dict, item_name: str, quantity: int):
     print(f"{receiver['name']} {item_name}s: {receiver['inventory'][item_name]['quantity']}\n")
 
 
-def show_inventory(inventory: dict, player_name: str):
+def show_inventory(inventory: dict, player_name: str) -> None:
     total_value = 0
     total_items = 0
     categories = dict()
@@ -99,7 +99,7 @@ def show_inventory(inventory: dict, player_name: str):
     print("\n")
 
 
-def ft_inventory_system():
+def ft_inventory_system() -> None:
     catalog = data['catalog']
     players_data = data['players']
     
