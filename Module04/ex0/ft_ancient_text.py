@@ -24,9 +24,7 @@ def ft_ancient_text() -> None:
     print("=== CYBER ARCHIVES - DATA RECOVERY SYYSTEM ===\n")
     recover_data()
     print()
-
     print("Data inscription complete. Storage unit sealed.")
-    print("Archive 'new_discovery.txt' ready for long-term preservation.")
 
 if __name__ == '__main__':
     ft_ancient_text()
