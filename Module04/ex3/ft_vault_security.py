@@ -11,7 +11,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-def secure_extraction():
+def secure_extraction() -> None:
     print("SECURE EXTRACTION:")
     with open('classified_data.txt', 'r') as vault:
         reading = vault.read()
@@ -19,14 +19,14 @@ def secure_extraction():
     print()
 
 
-def secure_preservation():
+def secure_preservation() -> None:
     print("SECURE PRESERVATION:")
     with open('security_protocols.txt', 'w') as vault:
         vault.write("[CLASSIFIED] New security protocols archived")
         print("[CLASSIFIED] New security protocols archived")
 
 
-def ft_vault_security():
+def ft_vault_security() -> None:
     print("=== CYBER ARCHIVES - VAULT SECURITY SYSTEM ===")
 
     print("Initiating secure vault access...\n")
