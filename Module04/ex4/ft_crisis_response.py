@@ -13,7 +13,7 @@
 
 import sys
 
-def catch_errors(filename):
+def catch_errors(filename: str) -> None:
     if filename == 'standard_archive.txt': 
         print(f"ROUTINE ACCESS: Attempting access to '{filename}'...")
     else:
@@ -34,7 +34,7 @@ def catch_errors(filename):
         print("RESPONSE: Unexpected anomaly", file=sys.stderr)
         print("STATUS: Crisis handled, \n")
 
-def ft_crisis_response():
+def ft_crisis_response() -> None:
     print("=== CYBER ARCHIVES - CRISIS RESPONSE SYSTEM ===\n")
     catch_errors('lost_archive.txt')
     catch_errors('classified_vault.txt')
