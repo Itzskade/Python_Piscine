@@ -43,7 +43,7 @@ players = [
 ]
 
 
-def list_comprehension():
+def list_comprehension() -> None:
     print("=== List Comprehension Examples ===")
     high_scores = [player['name'] for player in players if player['score'] > 2000]
     print("High scores (>2000):", high_scores)
@@ -54,7 +54,7 @@ def list_comprehension():
     print()
 
 
-def dict_comprehension():
+def dict_comprehension() -> None:
     print("=== Dict Comprehension Examples ===")
     player_scores = {player['name']: player['score'] for player in players}
     print("Players scores:", player_scores)
@@ -66,7 +66,7 @@ def dict_comprehension():
     print()
 
 
-def set_comprehension():
+def set_comprehension() -> None:
     print("=== Set Comprehension Examples ===")
     unique_players = {player['name'] for player in players}
     print("Unique players:", unique_players)
@@ -77,7 +77,7 @@ def set_comprehension():
     print()
 
 
-def combined_analysis():
+def combined_analysis() -> None:
     print ("=== Combined Analysis ===")
     print("Total players:", len(players))
     total_achievements = {achievement for player in players for achievement in player['achievements']}
@@ -96,7 +96,7 @@ def combined_analysis():
     print(f"Top performer: {top_name} ({top_score} points, {top_achievements} achievements)")
 
 
-def ft_analytics_dashboard():
+def ft_analytics_dashboard() -> None:
     print("=== Game Analytics Dashboard ===\n")
     list_comprehension()
     dict_comprehension()
