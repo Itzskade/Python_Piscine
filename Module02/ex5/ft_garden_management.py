@@ -11,18 +11,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-from typing import List, Dict
-
 class GardenManager(Exception):
     pass
 
 class AddPlants(GardenManager):
     pass
 
-
 class WaterPlants(GardenManager):
     pass
-
 
 class CheckHealth(GardenManager):
     pass
@@ -37,6 +33,7 @@ def adding_plant_garden(plant_list: list, name: str, water: int, sunlight: int) 
             'sunlight': sunlight
     })
     print(f"Added {name} successfully")
+
 
 def add_plant_garden(plant_list, values) -> None:
     try:
@@ -73,6 +70,7 @@ def sunlighting_plants(plant: dict, sunlight: int) -> None:
     plant['sunlight'] += sunlight
     #print(f"{plant['name']} received {sunlight} hours of sunlight")
 
+
 def sunlight_plants(plant_list: list, sunlight: int) -> None:
     try:
         for plant in plant_list:
@@ -87,6 +85,7 @@ def check_tank(tank: dict, amount: int) -> None:
     if tank['water'] + amount > 200:
         raise GardenError("Caught GardenError: Could not be filled due to the risk of overflow")
     print("Tank has enough water")
+
 
 def fill_tank(tank: dict, amount: int) -> None:
     try:
@@ -112,6 +111,7 @@ def check_plant_health(plant: dict):
     if plant['sunlight'] > 12:
         raise CheckHealth (f"Error checking {plant['name']}: Sunlight hours {plant['sunlight']} is too high (max 12)")
     print(f"{plant['name']} healthy (water: {plant['water']}, sun: {plant['sunlight']})")
+
 
 def test_plant_checks(plant_list: list) -> None:
     print("Checking plant health...")
