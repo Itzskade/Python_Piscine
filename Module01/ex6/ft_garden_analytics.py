@@ -116,10 +116,9 @@ def ft_garden_analytics() -> None:
 
     alice.get_report()
 
+    print(f"Height validation test: {GardenManager.validate_height(alice.plants)}")
     alice_score = alice.stats.calculate_score(alice.plants)
     bob_score   = bob.stats.calculate_score(bob.plants)
-
-    print(f"Height validation test: {GardenManager.validate_height(alice.plants)}")
     print(f"Garden scores Alice: {alice_score}, Bob: {bob_score}")
     GardenManager.create_garden_network()
 
