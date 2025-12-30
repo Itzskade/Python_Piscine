@@ -12,16 +12,16 @@
 # **************************************************************************** #
 
 class   Plant:
-    def __init__(self, name, height, age):
+    def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
 
-    def get_info(self):
+    def get_info(self) -> str:
         return (f"Created: {self.name}: ({self.height}cm, {self.age} days)")
 
 
-def ft_plant_factory():
+def ft_plant_factory() -> None:
     plant_data = [
         ("Rose", 25, 30),
         ("Oak", 15, 20),
@@ -30,15 +30,12 @@ def ft_plant_factory():
         ("Fern", 15, 120) 
     ]
 
-    plants = [Plant(name, height, age) for name, height, age in plant_data]
-
-    total_plants = 0
-    for i in plants:
-        total_plants += 1
-
     print("=== Plant Factory Output ===")
-    for plant in plants:
-        print(plant.get_info())
+    total_plants = 0
+    for data in plant_data:
+        new_plant = Plant(*data)
+        print(new_plant.get_info())
+        total_plants += 1
     print(f"\nTotal plants created: {total_plants}")
 
 if __name__ == "__main__":
