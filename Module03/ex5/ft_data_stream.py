@@ -12,7 +12,6 @@
 # **************************************************************************** #
 
 import time
-from typing import Generator
 
 event = [
         {'id': 1, 'player': 'frank', 'event_type': 'login', 'timestamp': '2024-01-01T23:17', 'data': {'level': 16, 'score_delta': 128, 'zone': 'pixel_zone_2'}}, 
@@ -67,31 +66,31 @@ event = [
         {'id': 50, 'player': 'alice', 'event_type': 'login', 'timestamp': '2024-01-15T19:36', 'data': {'level': 7, 'score_delta': -25, 'zone': 'pixel_zone_5'}}
 ]
 
-def login_event(player: str, timestamp: str) -> Generator[str, None, None]:
+def login_event(player: str, timestamp: str):
     yield f"Player {player} logged in at {timestamp}"
 
 
-def logout_event(player: str, timestamp: str) -> Generator[str, None, None]:
+def logout_event(player: str, timestamp: str):
     yield f"Player {player} logged out at {timestamp}"
 
 
-def death_event(player: str, level: int, timestamp: str) -> Generator[str, None, None]:
+def death_event(player: str, level: int, timestamp: str):
     yield f"Player {player} died on level {level} at {timestamp}"
 
 
-def level_up_event(player: str, level: int, timestamp: int) -> Generator[str, None, None]:
+def level_up_event(player: str, level: int, timestamp: str):
     yield f"Player {player} leveled up to level {level} at {timestamp}"
 
 
-def kill_event(player: str, level: int, timestamp: str) -> Generator[str, None, None]:
+def kill_event(player: str, level: int, timestamp: str):
     yield f"Player {player} defeated an enemy on level {level} at {timestamp}"
 
 
-def item_found_event(player: str, timestamp: str) -> Generator[str, None, None]:
+def item_found_event(player: str, timestamp: str):
     yield f"Player {player} found an item at {timestamp}"
 
 
-def event_generator() -> Generator[tuple[str, str], None, None]:
+def event_generator():
     count = 0
     for event_data in event:
         player = event_data['player']
@@ -171,7 +170,7 @@ def game_events_processor() -> None:
     print(f"Processing time: {elapsed:.3f} seconds")
 
 
-def fibonacci(size: int) -> Generator[int, None, None]:
+def fibonacci(size: int):
     a = 0
     b = 1
     for _ in range(size):
@@ -190,7 +189,7 @@ def is_prime(n: int) -> bool:
     return True
 
 
-def prime_generator(size: int) -> None:
+def prime_generator(size: int):
     n = 2
     i = 0
     while i < size:
@@ -200,7 +199,7 @@ def prime_generator(size: int) -> None:
         n += 1
 
 
-def ft_data_stream():
+def ft_data_stream() -> None:
     print("=== Game Data Stream Processor ===\n")
     game_events_processor()
 
@@ -218,10 +217,10 @@ def ft_data_stream():
     size  = 5
     first = True
     print(f"Prime numbers (first {size}):", end=" ")
-    for p in prime_generator(5):
+    for prime in prime_generator(size):
         if not first:
             print(", ", end="")
-        print(p, end="")
+        print(prime, end="")
         first = False
 
 if __name__ == '__main__':
