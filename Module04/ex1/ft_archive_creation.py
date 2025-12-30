@@ -11,16 +11,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-from typing import TextIO
-
-def create_file() -> TextIO:
+def create_file():
     file = open('new_discovery.txt', 'w')
     print("Initializing new storage unit: new_discovery.txt")
     print("Storage unit created successfully...\n")
     return file
 
 
-def write_file(file: TextIO) -> None:
+def write_file(file) -> None:
     entries = [
             "New quantum algorith discovered",
             "Efficiency increased by 347 %",
