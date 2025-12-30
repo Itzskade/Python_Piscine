@@ -25,7 +25,7 @@ def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int) -
     print(f"Plant {plant_name} is healthy!")
 
 
-def test_plant_checks():
+def test_plant_checks() -> None:
 
     print("=== Garden Plant Health Checker ===\n")
 
