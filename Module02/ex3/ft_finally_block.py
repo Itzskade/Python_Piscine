@@ -11,8 +11,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-from typing import List
-
 class WateringError(Exception):
     pass
 
@@ -23,7 +21,7 @@ def watering_plant(plant: str) -> None:
     print(f"Watering {plant}")
 
 
-def water_plants(plant_list: List[str]) -> None:
+def water_plants(plant_list: list) -> None:
     print("Opening watering system")
     try:
         for plant in plant_list:
@@ -36,7 +34,7 @@ def water_plants(plant_list: List[str]) -> None:
         print("Closing watering system (cleanup)")
 
 
-def test_watering_system(): 
+def test_watering_system() ->None: 
     plant_list = ['tomato', 'lettuce', 'carrots']
     error_list = ['tomato', None, 'carrots']
 
