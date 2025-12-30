@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+t#!/usr/bin/env python3
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -11,9 +11,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-from typing import Dict, Callable
-
-def test_error_types(value: int, a: int, b: int, filename: str, dictionary: Dict[str, int], key: str) -> None:
+def test_error_types(value: int, a: int, b: int, filename: str, dictionary: dict, key: str) -> None:
     operations = garden_operations()
     
     print("=== Garden Error Types Error ===\n")
@@ -54,7 +52,7 @@ def test_error_types(value: int, a: int, b: int, filename: str, dictionary: Dict
     print("\nAll Error types tested successfully!")
 
 
-def garden_operations() -> Dict[str, Callable]:
+def garden_operations() -> dict:
     def garden_value_error(value):
         int(value)
 
@@ -74,7 +72,7 @@ def garden_operations() -> Dict[str, Callable]:
             "key_error": garden_key_error 
     }
 
-def ft_different_errors():
+def ft_different_errors() -> None:
     value = "abc"
     a = 10
     b = 0
