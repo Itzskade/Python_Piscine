@@ -13,9 +13,8 @@
 
 import sys
 import math
-from typing import Optional, Tuple
 
-def parse_coordinates(string: str) -> Optional[Tuple[int, int, int]]:
+def parse_coordinates(string: str) -> tuple | None:
     try:
         parts = string.split(",")
         if len(parts) != 3:
@@ -30,7 +29,7 @@ def parse_coordinates(string: str) -> Optional[Tuple[int, int, int]]:
         return None
 
 
-def euclidean_distance(origin: Tuple[int, int, int], point: Tuple[int, int, int]) -> float:
+def euclidean_distance(origin: tuple, point: tuple) -> float:
     x1, y1, z1 = origin
     x2, y2, z2 = point
     return math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
