@@ -12,7 +12,7 @@
 # **************************************************************************** #
 
 class Plant:
-    def __init__(self, name: str, height: int, age: int) -> None:
+    def __init__(self, name: str, height: int, age: int):
         self.name = name
         self.height = height
         self.age = age
@@ -21,87 +21,107 @@ class Plant:
         self.height += cm
         print(f"{self.name} grew {cm}cm")
 
+
 class FloweringPlant(Plant):
-    def __init__(self, name: str, height: int, age: int, color: str) -> None:
+    def __init__(self, name: str, height: int, age: int, color: str):
         super().__init__(name, height, age)
         self.color = color
 
+
 class PrizeFlower(FloweringPlant):
-    def __init__(self, name: str, height: int, age: int, color: str, points: int) -> None:
+    def __init__(self, name: str, height: int, age: int, color: str, points: int):
         super().__init__(name, height, age, color)
-        self.points = points
+        self.prize_points = points
+
 
 class GardenManager:
     total_gardens = 0
 
-    def __init__(self, owner_name: str) -> None:
+    class GardenStats:
+        def calculate_score(self, plants) -> int:
+            score = 0
+            for plant in plants:
+                score += plant.height
+                if isinstance(plant, FloweringPlant):
+                    score += 20
+            return score
+
+        def count_types(self, plants) -> dict:
+            counts = {"regular": 0, "flowering": 0, "prize": 0}
+            for plant in plants:
+                if isinstance(plant, PrizeFlower):
+                    counts["prize"] += 1
+                elif isinstance(plant, FloweringPlant):
+                    counts["flowering"] += 1
+                else:
+                    counts["regular"] += 1
+            return counts
+
+    def __init__(self, owner_name: str):
         self.owner_name = owner_name
-        self.plants: list[Plant] = []
-        self.growth = 0
+        self.plants = []
+        self.total_growth = 0
+        self.stats = self.GardenStats()
         GardenManager.total_gardens += 1
 
-    def add_plant(self, plant: Plant) -> None:
+    def add_plant(self, plant) -> None:
         self.plants.append(plant)
         print(f"Added {plant.name} to {self.owner_name}'s garden")
 
     def grow_all(self, cm: int) -> None:
-        print(f"{self.owner_name} is helping all plants grow...")
-        for p in self.plants:
-            p.grow(cm)
-            self.growth += cm
+        print(f"\n{self.owner_name} is helping all plants grow...")
+        for plant in self.plants:
+            plant.grow(cm)
+            self.total_growth += cm
 
-    def report(self) -> None:
+    def get_report(self) -> None:
         print(f"\n=== {self.owner_name}'s Garden Report ===")
-        for p in self.plants:
-            desc = f"- {p.name}: {p.height}cm"
-            if isinstance(p, FloweringPlant):
-                desc += f", {p.color} flowers (blooming)"
-            if isinstance(p, PrizeFlower):
-                desc += f", Prize points: {p.points}\n"
-            print(desc)
-        print(f"Plants added: {len(self.plants)}, Total growth: {self.growth}cm")
-        types = {"regular":0,"flowering":0,"prize":0}
-        for p in self.plants:
-            if isinstance(p, PrizeFlower): 
-                types["prize"]+=1
-            elif isinstance(p, FloweringPlant): 
-                types["flowering"]+=1
-            else: 
-                types["regular"]+=1
-        print(f"Types: {types['regular']} regular, {types['flowering']} flowering, {types['prize']} prize flowers")
+        count = 0
+        for plant in self.plants:
+            count += 1
+            info = f"- {plant.name}: {plant.height}cm"
+            if isinstance(plant, FloweringPlant):
+                info += f", {plant.color} flowers (blooming)"
+            if isinstance(plant, PrizeFlower):
+                info += f", prize points: {plant.prize_points}"
+            print(info)
+        print(f"\nPlants added: {count}, Total growth: {self.total_growth}cm")
+        types = self.stats.count_types(self.plants)
+        print(f"Plant types: {types['regular']} regular, {types['flowering']} flowering, {types['prize']} prize flowers\n")
 
     @staticmethod
-    def validate_height(h: int) -> bool:
-        return h > 0
+    def validate_height(plants: int) -> bool:
+        for plant in plants:
+            if plant.height <= 0:
+                return False
+        return True
 
     @classmethod
-    def network(cls) -> None:
+    def create_garden_network(cls) -> None:
         print(f"Total gardens managed: {cls.total_gardens}")
 
-    def score(self) -> int:
-        s = 0
-        for p in self.plants:
-            s += p.height
-            if isinstance(p, FloweringPlant): s += 20
-        return s
 
 def ft_garden_analytics() -> None:
-    print(f"=== Garden Management System Demo ===")
-    print() 
+    print("=== Garden Management System Demo ===\n")
+
     alice = GardenManager("Alice")
-    alice.add_plant(Plant("Oak",100,365))
-    alice.add_plant(FloweringPlant("Rose",25,30,"red"))
-    alice.add_plant(PrizeFlower("Sunflower",50,45,"yellow",10))
-    
     bob = GardenManager("Bob")
+
+    alice.add_plant(Plant("Oak", 100, 365))
+    alice.add_plant(FloweringPlant("Rose", 25, 30, "red"))
+    alice.add_plant(PrizeFlower("Sunflower", 50, 45, "yellow", 10))
     bob.add_plant(FloweringPlant("Tulip", 72, 10, "pink"))
-    print()
+
     alice.grow_all(1)
-    alice.report()
-    print()
-    print(f"Height validation test: {GardenManager.validate_height(101)}")
-    print(f"Garden scores: - Alice: {alice.score()}, Bob: {bob.score()}")
-    GardenManager.network()
+
+    alice.get_report()
+
+    alice_score = alice.stats.calculate_score(alice.plants)
+    bob_score   = bob.stats.calculate_score(bob.plants)
+
+    print(f"Height validation test: {GardenManager.validate_height(alice.plants)}")
+    print(f"Garden scores Alice: {alice_score}, Bob: {bob_score}")
+    GardenManager.create_garden_network()
 
 if __name__ == "__main__":
     ft_garden_analytics()
