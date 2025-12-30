@@ -11,8 +11,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-from typing import Dict, Set
-
 data = {
         'alice': ['first_blood', 'pixel_perfect', 'speed_runner', 'first_blood', 'first_blood'], 
         'bob': ['level_master', 'boss_hunter', 'treasure_seeker', 'level_master', 'first_blood'], 
@@ -22,21 +20,21 @@ data = {
         'frank': ['explorer', 'boss_hunter', 'first_blood', 'explorer', 'first_blood', 'boss_hunter']
 }
 
-def build_player_sets(data: Dict[str, list[str]]) -> Dict[str, Set[str]]:
+def build_player_sets(data: dict) -> dict:
     player_achievements = dict()
     for name in data:
         player_achievements[name] = set(data[name])
     return player_achievements
 
 
-def compute_achievements(player_achievements: Dict[str, Set[str]]) -> Set[str]:
+def compute_achievements(player_achievements: dict) -> set:
     achievements = set()
     for name in player_achievements:
         achievements = achievements.union(player_achievements[name])
     return achievements
 
 
-def compute_common_achievements(player_achievements: Dict[str, Set[str]]) -> Set[str]:
+def compute_common_achievements(player_achievements: dict) -> set:
     names = list(player_achievements)
     common = set(player_achievements[names[0]])
     for name in names:
@@ -44,7 +42,7 @@ def compute_common_achievements(player_achievements: Dict[str, Set[str]]) -> Set
     return common
 
 
-def compute_rare_achievements(player_achievements: Dict[str, Set[str]], achievements: Set[str]) -> Set[str]:
+def compute_rare_achievements(player_achievements: dict, achievements: set) -> set:
     names = list(player_achievements)
     repeated = set()
     for i in range(len(names)):
