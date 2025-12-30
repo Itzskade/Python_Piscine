@@ -11,8 +11,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-from typing import Dict
-
 data = {
         'players': {
             'alice': {'items': {'pixel_sword': 1, 'code_bow': 1, 'health_byte': 1, 'quantum_ring': 3}, 'total_value': 1875, 'item_count': 6}, 
@@ -29,7 +27,7 @@ data = {
     }
 }
 
-def build_inventory(player_items: Dict[str, int], catalog: Dict[str, Dict[str, object]] ) -> Dict[str, Dict[str, object]]: 
+def build_inventory(player_items: dict, catalog: dict) -> dict: 
     inventory = dict()
     for item_name in player_items.keys():
         quantity = player_items.get(item_name)
@@ -46,7 +44,7 @@ def build_inventory(player_items: Dict[str, int], catalog: Dict[str, Dict[str, o
     return inventory
 
 
-def transfer_item(sender: Dict[str, object], receiver: Dict[str, object], item_name: str, quantity: int) -> None:
+def transfer_item(sender: dict, receiver: dict, item_name: str, quantity: int) -> None:
     sender_inv = sender['inventory']
     item = sender_inv.get(item_name)
 
@@ -71,7 +69,7 @@ def transfer_item(sender: Dict[str, object], receiver: Dict[str, object], item_n
     print(f"{receiver['name']} {item_name}s: {receiver['inventory'][item_name]['quantity']}\n")
 
 
-def show_inventory(inventory: Dict[str, Dict[str, object]], player_name: str) -> None:
+def show_inventory(inventory: dict, player_name: str) -> None:
     total_value = 0
     total_items = 0
     categories = dict()
