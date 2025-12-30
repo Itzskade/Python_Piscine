@@ -12,7 +12,7 @@
 # **************************************************************************** #
 
 class Plant:
-    def __init__(self, name: str, height: int, age: int):
+    def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
@@ -23,13 +23,13 @@ class Plant:
 
 
 class FloweringPlant(Plant):
-    def __init__(self, name: str, height: int, age: int, color: str):
+    def __init__(self, name: str, height: int, age: int, color: str) -> None:
         super().__init__(name, height, age)
         self.color = color
 
 
 class PrizeFlower(FloweringPlant):
-    def __init__(self, name: str, height: int, age: int, color: str, points: int):
+    def __init__(self, name: str, height: int, age: int, color: str, points: int) -> None:
         super().__init__(name, height, age, color)
         self.prize_points = points
 
@@ -46,7 +46,7 @@ class GardenManager:
                     score += 20
             return score
 
-        def count_types(self, plants) -> dict:
+        def count_types(self, plants) -> dict[str, int]:
             counts = {"regular": 0, "flowering": 0, "prize": 0}
             for plant in plants:
                 if isinstance(plant, PrizeFlower):
@@ -57,7 +57,7 @@ class GardenManager:
                     counts["regular"] += 1
             return counts
 
-    def __init__(self, owner_name: str):
+    def __init__(self, owner_name: str) -> None:
         self.owner_name = owner_name
         self.plants = []
         self.total_growth = 0
