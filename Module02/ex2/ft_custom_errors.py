@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_custom_errors.py                                :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmarin-n <rmarin-n@student.42barcelona.co  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/26 08:28:42 by rmarin-n          #+#    #+#              #
-#    Updated: 2025/12/26 08:28:43 by rmarin-n         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-from typing import Dict
 
 class GardenError(Exception):
     pass
@@ -23,7 +10,7 @@ class WaterError(GardenError):
     pass
 
 #check tank water func
-def check_tank(tank Dict[str, int]): -> None:
+def check_tank(tank dict): -> None:
     if tank['water'] < 5:
         raise WaterError("Not enough water in the tank!")
     if tank['water'] > 200:
@@ -31,14 +18,14 @@ def check_tank(tank Dict[str, int]): -> None:
     print(f"Tank has enough water: Current: {tank['water']}")
 
 #fill tank water func
-def fill_tank(tank: Dict[str, int], amount: int): -> None:
+def fill_tank(tank: dict], amount: int): -> None:
     if tank['water'] + amount > 200:
         raise WaterError("Could not be filled due to the risk of overflow.")
     tank['water'] += amount
     print(f"Tank filled correctly!\nCurrent: {tank['water']}")
     
 #check plant status by water
-def check_plant(plant: Dict[str, str], irrigate: int, tank): -> None:
+def check_plant(plant: dict, irrigate: int, tank): -> None:
     if tank['water'] < irrigate:
         raise PlantError(f"Not enough water to irrigate {plant['name']}!")
     if irrigate < 2:
@@ -49,7 +36,7 @@ def check_plant(plant: Dict[str, str], irrigate: int, tank): -> None:
     print("The plant was watered correctly!")
     
 #tester
-def ft_custom_errors():
+def ft_custom_errors() -> None:
     print("=== Custom Garden Errors Demo ===\n")
     
     #create tank (dictionary)
