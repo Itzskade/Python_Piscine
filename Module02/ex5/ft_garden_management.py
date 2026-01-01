@@ -75,7 +75,7 @@ class GardenManager:
             raise GardenError("Caught GardenError: Could not be filled due to the risk of overflow")
         print("Tank could be filled")
 
-    def fill_tank(self, tank: dict, amount: int) -> dict:
+    def fill_tank(self, tank: dict, amount: int) -> None:
         """Fill the tank safely, recovering from errors."""
         try:
             self.check_tank(tank, amount)
@@ -86,7 +86,6 @@ class GardenManager:
         else:
             tank['water'] += amount
             print(f"Tank filled correctly! Current water: {tank['water']} liters")
-        return tank
 
 
 def ft_garden_demo() -> None:
@@ -94,7 +93,7 @@ def ft_garden_demo() -> None:
     manager = GardenManager("Alice")
     tank = {'water': 10}
 
-    plant_list: list[dict | None] = [
+    plant_list = [
         {'name': 'tomato', 'water': 0, 'sunlight': 8},
         {'name': 'lettuce', 'water': 10, 'sunlight': 1},
         None
