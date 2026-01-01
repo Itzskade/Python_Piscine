@@ -1,33 +1,40 @@
 #!/usr/bin/env python3
 
 class Plant:
+    """Represnets name, height(cm) and age(days) of a plant"""
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
 
-    def grow(self, cm: int = 1) -> None:
+    def grow(self, cm: int) -> None:
+        """Increase height by cm."""
         self.height += cm
         print(f"{self.name} grew {cm}cm")
 
 
 class FloweringPlant(Plant):
+    """Plant with flowers and color."""
     def __init__(self, name: str, height: int, age: int, color: str) -> None:
         super().__init__(name, height, age)
         self.color = color
 
 
 class PrizeFlower(FloweringPlant):
+    """Flowering plant with prize points"""
     def __init__(self, name: str, height: int, age: int, color: str, points: int) -> None:
         super().__init__(name, height, age, color)
         self.prize_points = points
 
 
 class GardenManager:
+    """Manages a garden and plant statistics"""
     total_gardens = 0
 
     class GardenStats:
+        """Analytics for a garden."""
         def calculate_score(self, plants) -> int:
+            """Compute total score of plants."""
             score = 0
             for plant in plants:
                 score += plant.height
@@ -36,6 +43,7 @@ class GardenManager:
             return score
 
         def count_types(self, plants) -> dict[str, int]:
+            """Count plant types"""
             counts = {"regular": 0, "flowering": 0, "prize": 0}
             for plant in plants:
                 if isinstance(plant, PrizeFlower):
@@ -54,16 +62,19 @@ class GardenManager:
         GardenManager.total_gardens += 1
 
     def add_plant(self, plant) -> None:
+        """Add a plant."""
         self.plants.append(plant)
         print(f"Added {plant.name} to {self.owner_name}'s garden")
 
     def grow_all(self, cm: int) -> None:
+        """Grow all plants by cm."""
         print(f"\n{self.owner_name} is helping all plants grow...")
         for plant in self.plants:
             plant.grow(cm)
             self.total_growth += cm
 
     def get_report(self) -> None:
+        """Print garden summary."""
         print(f"\n=== {self.owner_name}'s Garden Report ===")
         count = 0
         for plant in self.plants:
@@ -80,6 +91,7 @@ class GardenManager:
 
     @staticmethod
     def validate_height(plants: int) -> bool:
+        """Check if all plants have positive height."""
         for plant in plants:
             if plant.height <= 0:
                 return False
@@ -87,10 +99,12 @@ class GardenManager:
 
     @classmethod
     def create_garden_network(cls) -> None:
+        """Show total gardens managed"""
         print(f"Total gardens managed: {cls.total_gardens}")
 
 
 def ft_garden_analytics() -> None:
+    """Demo of GardenManager system."""
     print("=== Garden Management System Demo ===\n")
 
     alice = GardenManager("Alice")
