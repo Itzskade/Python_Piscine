@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_achievement_tracker.py                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmarin-n <rmarin-n@student.42barcelona.co  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/26 08:30:03 by rmarin-n          #+#    #+#              #
-#    Updated: 2025/12/26 08:30:04 by rmarin-n         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 data = {
         'alice': ['first_blood', 'pixel_perfect', 'speed_runner', 'first_blood', 'first_blood'], 
