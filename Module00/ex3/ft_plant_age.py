@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -17,3 +18,5 @@ def ft_plant_age() -> None:
     else:
         print("Plant needs more time to grow")
         
+if name == '__main__':
+    ft_plant_age()
