@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 def ft_garden_intro():
+    """Print basic garden plant information."""
     name = "Rose"
     height = 25
     age = 30
