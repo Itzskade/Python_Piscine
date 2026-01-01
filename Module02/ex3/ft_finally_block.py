@@ -5,12 +5,14 @@ class WateringError(Exception):
 
 
 def watering_plant(plant: str) -> None:
+    """Water a single plant; raise error if invalid."""
     if plant is None:
         raise WateringError(f"Error: Cannot water {plant} - invalid plant!")
     print(f"Watering {plant}")
 
 
 def water_plants(plant_list: list) -> None:
+     """Water multiple plants with try/except/finally for safety."""
     print("Opening watering system")
     try:
         for plant in plant_list:
@@ -24,6 +26,7 @@ def water_plants(plant_list: list) -> None:
 
 
 def test_watering_system() -> None: 
+    """Demonstrate normal and error watering scenarios."""
     plant_list = ['tomato', 'lettuce', 'carrots']
     error_list = ['tomato', None, 'carrots']
 
@@ -35,6 +38,7 @@ def test_watering_system() -> None:
     water_plants(error_list)
     print()
     print("Cleanup always happens, even with errors!")
+
 
 if __name__ == '__main__':
     test_watering_system()
