@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def check_temperature(temp_str: str) -> None:
-    """Check if temperature is valid for plants."""
+    """Check if temperature is valid for plants (0-40ºC)."""
     try:
         tmp = int(temp_str)
     except ValueError:
