@@ -30,6 +30,7 @@ def ft_plant_factory() -> None:
         total_plants += 1
     print(f"\nTotal plants created: {total_plants}")
 
+
 if __name__ == "__main__":
     ft_plant_factory()
 
