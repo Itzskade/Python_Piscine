@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int) -> None:
+    """Check valid name and plant health based on water and sunlight levels."""
     if not plant_name:
         raise ValueError("Error: Plant name cannot be empty!")
     if water_level < 1:
@@ -15,7 +16,7 @@ def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int) -
 
 
 def test_plant_checks() -> None:
-
+    """Test plant health checks with valid and invalid values."""
     print("=== Garden Plant Health Checker ===\n")
 
     print("Testing good values...")
