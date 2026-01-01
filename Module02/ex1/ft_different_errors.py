@@ -1,15 +1,4 @@
 t#!/usr/bin/env python3
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_different_errors.py                             :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmarin-n <rmarin-n@student.42barcelona.co  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/26 08:28:30 by rmarin-n          #+#    #+#              #
-#    Updated: 2025/12/26 08:28:33 by rmarin-n         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 def test_error_types(value: int, a: int, b: int, filename: str, dictionary: dict, key: str) -> None:
     operations = garden_operations()
