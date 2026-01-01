@@ -18,5 +18,6 @@ def ft_garden_data() -> None:
     print(f"{plant2.name}: {plant2.height}cm, {plant2.age} days old")
     print(f"{plant3.name}: {plant3.height}cm, {plant3.age} days old")
 
+
 if __name__ == "__main__":
     ft_garden_data()
