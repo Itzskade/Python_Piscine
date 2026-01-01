@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -21,6 +20,3 @@ def ft_count_harvest_recursive() -> None:
         print(f"Day {day}")
         countdown(day + 1)
     countdown(1)
-
-if __name__ == '__main__':
-    ft_count_harvest_recursive()
