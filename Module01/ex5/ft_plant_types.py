@@ -70,5 +70,6 @@ def ft_plant_types() -> None:
             print(f"{plant.name} (Vegetable): {plant.height}cm, {plant.age} days, {plant.harvest_season} harvest")
             plant.nutritional_value()
 
+
 if __name__ == "__main__":
     ft_plant_types()
