@@ -43,5 +43,6 @@ def ft_garden_security() -> None:
     plant.set_age(-10)
     plant.get_info()
 
+
 if __name__ == "__main__":
     ft_garden_security()
