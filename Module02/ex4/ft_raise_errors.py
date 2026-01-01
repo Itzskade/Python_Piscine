@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_raise_errors.py                                 :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmarin-n <rmarin-n@student.42barcelona.co  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/26 08:29:03 by rmarin-n          #+#    #+#              #
-#    Updated: 2025/12/26 08:29:06 by rmarin-n         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 def check_plant_health(plant_name: str, water_level: int, sunlight_hours: int) -> None:
     if not plant_name:
