@@ -109,21 +109,18 @@ def ft_garden_analytics() -> None:
 
     alice = GardenManager("Alice")
     bob = GardenManager("Bob")
-
     alice.add_plant(Plant("Oak", 100, 365))
     alice.add_plant(FloweringPlant("Rose", 25, 30, "red"))
     alice.add_plant(PrizeFlower("Sunflower", 50, 45, "yellow", 10))
     bob.add_plant(FloweringPlant("Tulip", 72, 10, "pink"))
-
     alice.grow_all(1)
-
     alice.get_report()
-
     print(f"Height validation test: {GardenManager.validate_height(alice.plants)}")
     alice_score = alice.stats.calculate_score(alice.plants)
     bob_score   = bob.stats.calculate_score(bob.plants)
     print(f"Garden scores Alice: {alice_score}, Bob: {bob_score}")
     GardenManager.create_garden_network()
+
 
 if __name__ == "__main__":
     ft_garden_analytics()
