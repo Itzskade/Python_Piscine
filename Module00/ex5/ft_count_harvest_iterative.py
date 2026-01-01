@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -16,6 +15,3 @@ def ft_count_harvest_iterative() -> None:
     for day in range(1, days + 1):
         print(f"Day {day}")
     print("Harvest time!")
-
-if __name__ == '__main__':
-    ft_count_harvest_iterative()
