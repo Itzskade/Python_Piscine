@@ -38,5 +38,6 @@ def ft_plant_growth() -> None:
     growth = rose.height - rose.initial_height
     print(f"Growth this week: +{growth}cm")
 
+
 if __name__ == "__main__":
     ft_plant_growth()
