@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -16,3 +17,6 @@ def ft_garden_summary() -> None:
     print(f"Garden: {name}")
     print(f"Plants: {nplants}") 
     print("Status: Growing Well!")
+
+if __name__ == '__main__':
+    ft_garden_summary()
