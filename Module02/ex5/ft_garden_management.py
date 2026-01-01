@@ -16,6 +16,7 @@ class GardenError(GardenManager):
     pass
 
 def adding_plant_garden(plant_list: list, name: str, water: int, sunlight: int) -> None:
+    """Add a plant dict to the garden list."""
     plant_list.append({
             'name': name,
             'water': water,
@@ -25,6 +26,7 @@ def adding_plant_garden(plant_list: list, name: str, water: int, sunlight: int) 
 
 
 def add_plant_garden(plant_list, values) -> None:
+    """Add a plant safely, catching errors if invalid."""
     try:
         if values is None:
             raise AddPlants("Error adding plant: Plant name cannot be empty!")
@@ -34,6 +36,7 @@ def add_plant_garden(plant_list, values) -> None:
 
 
 def watering_plants(plant: dict, tank: dict, irrigate: int) -> None:
+    """Water a single plant; raise error if invalid or not enough water."""
     if plant is None:
         raise WaterPlants(f"Cannot water invalid plant!")
     if tank['water'] < irrigate:
@@ -43,6 +46,7 @@ def watering_plants(plant: dict, tank: dict, irrigate: int) -> None:
     print(f"Watering {plant['name']} - success")
 
 def water_plants(plant_list: list, tank: dict, irrigate: int) -> None:
+    """Water all plants, handling errors and cleanup."""
     print("Watering plants...")
     try:
         for plant in plant_list:
@@ -54,6 +58,7 @@ def water_plants(plant_list: list, tank: dict, irrigate: int) -> None:
 
 
 def sunlighting_plants(plant: dict, sunlight: int) -> None:
+    """Give sunlight to a plant; raise error if invalid."""
     if plant is None:
         raise CheckHealth("Invalid plant!")
     plant['sunlight'] += sunlight
@@ -61,6 +66,7 @@ def sunlighting_plants(plant: dict, sunlight: int) -> None:
 
 
 def sunlight_plants(plant_list: list, sunlight: int) -> None:
+     """Give sunlight to all plants, handling errors."""
     try:
         for plant in plant_list:
             sunlighting_plants(plant, sunlight)
@@ -69,6 +75,7 @@ def sunlight_plants(plant_list: list, sunlight: int) -> None:
 
 
 def check_tank(tank: dict, amount: int) -> None:
+    """Check if tank can supply and receive water safely."""
     if tank['water'] < 1:
         raise GardenError("Caught GardenError: Not enough water in tank")
     if tank['water'] + amount > 200:
@@ -77,6 +84,7 @@ def check_tank(tank: dict, amount: int) -> None:
 
 
 def fill_tank(tank: dict, amount: int) -> None:
+    """Fill the tank safely, recovering from errors."""
     try:
         check_tank(tank, amount)
     except GardenError as e:
@@ -89,6 +97,7 @@ def fill_tank(tank: dict, amount: int) -> None:
 
 
 def check_plant_health(plant: dict):
+    """Check a plant's water and sunlight levels and report."""
     if plant['name'] is None:
         raise CheckHealth("Error: Plant name cannot be empty!")
     if plant['water'] < 1:
@@ -103,6 +112,7 @@ def check_plant_health(plant: dict):
 
 
 def test_plant_checks(plant_list: list) -> None:
+    """Test health checks for all plants in the list."""
     print("Checking plant health...")
     for plant in plant_list:
         try:
@@ -113,6 +123,8 @@ def test_plant_checks(plant_list: list) -> None:
 
 
 def ft_garden_management():
+    """Run full garden management demo:
+    add, water, sunlight, test, fill tank."""
     print("=== Garden Management System ===\n")
 
     tank = {'water': 10}
