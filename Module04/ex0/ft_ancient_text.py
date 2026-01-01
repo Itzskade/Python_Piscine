@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_ancient_text.py                                 :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmarin-n <rmarin-n@student.42barcelona.co  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/28 16:00:56 by rmarin-n          #+#    #+#              #
-#    Updated: 2025/12/28 16:00:56 by rmarin-n         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 def recover_data() -> None:
     print("Accessing Storage Vault: ancient_fragment.txt")
