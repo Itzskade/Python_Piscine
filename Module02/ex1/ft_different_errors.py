@@ -1,8 +1,33 @@
-t#!/usr/bin/env python3
+#!/usr/bin/env python3
 
-def test_error_types(value: int, a: int, b: int, filename: str, dictionary: dict, key: str) -> None:
+def garden_operations() -> dict:
+    """Return dictionary of functions that raise common errors."""
+    def garden_value_error(value):
+        int(value)
+
+    def garden_zero_division(a, b):
+        a / b
+
+    def garden_file_error(filename):
+        open(filename)
+
+    def garden_key_error(dictionary, key):
+        dictionary[key]
+
+    operations = {
+        "value_error": garden_value_error,
+        "zero_division": garden_zero_division,
+        "file_error": garden_file_error,
+        "key_error": garden_key_error
+    }
+    return operations
+
+
+def test_error_types(
+    value: int, a: int, b: int, filename: str, dictionary: dict, key: str) -> None:
+    """Test different Python error types and handle them."""
     operations = garden_operations()
-    
+
     print("=== Garden Error Types Error ===\n")
     try:
         print("Testing ValueError...")
@@ -15,7 +40,7 @@ def test_error_types(value: int, a: int, b: int, filename: str, dictionary: dict
         print("Testing ZeroDivisionError...")
         operations["zero_division"](a, b)
     except ZeroDivisionError as e:
-        print("Caught ZerorDivisionError:",e )
+        print("Caught ZeroDivisionError:", e)
     print()
 
     try:
@@ -31,7 +56,7 @@ def test_error_types(value: int, a: int, b: int, filename: str, dictionary: dict
     except KeyError as e:
         print("Caught KeyError:", e)
     print()
-    
+
     try:
         print("Testing multiple errors together...")
         operations["value_error"](value)
@@ -41,27 +66,8 @@ def test_error_types(value: int, a: int, b: int, filename: str, dictionary: dict
     print("\nAll Error types tested successfully!")
 
 
-def garden_operations() -> dict:
-    def garden_value_error(value):
-        int(value)
-
-    def garden_zero_division(a, b):
-        a / b
-
-    def garden_file_error(filename):
-        open(filename)
-
-    def garden_key_error(dictionary, key):
-        dictionary[key]
-
-    return {
-            "value_error": garden_value_error, 
-            "zero_division": garden_zero_division,
-            "file_error": garden_file_error, 
-            "key_error": garden_key_error 
-    }
-
 def ft_different_errors() -> None:
+    """Run all error type tests."""
     value = "abc"
     a = 10
     b = 0
