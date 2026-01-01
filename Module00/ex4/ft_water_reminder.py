@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -11,8 +12,12 @@
 # **************************************************************************** #
 
 def ft_water_reminder() -> None:
-    days = int(input("Days since last watering: "))
+    days = 4
+    print(f"Days since last watering: {days}"))
     if (days > 2):
         print("Water the plants")
     else:
         print("Plants are fine")
+
+if __name__ == '__main__':
+    ft_water_reminder()
