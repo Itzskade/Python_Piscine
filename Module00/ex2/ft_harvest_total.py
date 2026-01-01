@@ -16,6 +16,3 @@ def ft_harvest_total() -> None:
     second = int(input("Day 2 harvest: "))
     third = int(input("Day 3 harvest: "))
     print(f"Total harvest: {first + second + third}")
-
-if __name__ == '__main__':
-    ft_harvest_total()
