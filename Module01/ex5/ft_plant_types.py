@@ -9,19 +9,26 @@ class Plant:
 
 
 class Tree(Plant):
-    """Represents name, height(cm), age(days), trunk diameter(cm) and shade(m²) of a tree."""
-    def __init__(self, name: str, height: int, age: int, trunk_diameter: int) -> None:
+    """Represents name, height(cm), age(days), 
+    trunk diameter(cm) and shade(m²) of a tree."""
+    def __init__(self, name: str, height: int, 
+                 age: int, trunk_diameter: int) -> None:
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
 
     def produce_shade(self) -> None:
         """Prints how many shade tree provides"""
-        print(f"{self.name} provides {self.trunk_diameter * 1.5} square meters of shade\n")
+        print(
+            f"{self.name} provides {self.trunk_diameter * 1.5} "
+            "square meters of shade\n"
+        )
 
 
 class Flower(Plant):
-    """Represents name, height(cm), age(days), color and blooming status of a flower."""
-    def __init__(self, name: str, height: int, age: int, color: str, is_blooming: bool = True) -> None:
+    """Represents name, height(cm), age(days),
+    color and blooming status of a flower."""
+    def __init__(self, name: str, height: int, age: int,
+                 color: str, is_blooming: bool = True) -> None:
         super().__init__(name, height, age)
         self.color = color
         self.is_blooming = is_blooming
@@ -35,8 +42,10 @@ class Flower(Plant):
 
 
 class Vegetable(Plant):
-    """Represents name, height(cm), age(days), harvest season and nutrition value of a vegetable."""
-    def __init__(self, name: str, height: int, age: int, harvest_season: str, nutrition: str) -> None:
+    """Represents name, height(cm), age(days),
+    harvest season and nutrition value of a vegetable."""
+    def __init__(self, name: str, height: int, age: int,
+                 harvest_season: str, nutrition: str) -> None:
         super().__init__(name, height, age)
         self.harvest_season = harvest_season
         self.nutrition = nutrition
@@ -61,13 +70,22 @@ def ft_plant_types() -> None:
     
     for plant in plants:
         if plant.__class__.__name__ == "Tree":
-            print(f"{plant.name} (Tree): {plant.height}cm, {plant.age} days, {plant.trunk_diameter} diameter")
+            print(
+                f"{plant.name} (Tree): {plant.height}cm, "
+                f"{plant.age} days, {plant.trunk_diameter} diameter"
+            )
             plant.produce_shade()
         elif plant.__class__.__name__ == "Flower":
-            print(f"{plant.name} (Flower): {plant.height}cm, {plant.age} days, {plant.color} color")
+            print(
+                f"{plant.name} (Flower): {plant.height}cm, "
+                f"{plant.age} days, {plant.color} color"
+            )
             plant.bloom()
         elif plant.__class__.__name__ == "Vegetable":
-            print(f"{plant.name} (Vegetable): {plant.height}cm, {plant.age} days, {plant.harvest_season} harvest")
+            print(
+                f"{plant.name} (Vegetable): {plant.height}cm, "
+                f"{plant.age} days, {plant.harvest_season} harvest"
+            )
             plant.nutritional_value()
 
 
