@@ -1,47 +1,65 @@
 #!/usr/bin/env python3
 
 class SecurePlant:
-    """Represents name, height (cm) and age (days) of a plant."""
-    def __init__(self, name: str, height: int, age: int):
+    """Represents plant with protected height & age values."""
+    def __init__(self, name: str) -> None:
+        """Initialize plant with name & protected attributes."""
         self.name = name
-        print(f"Plant created: {self.name}")
-        self.height = 0
-        self.age = 0
-        self.set_height(height)
-        self.set_age(age)
+        self._height = 0
+        self._age = 0
+
+    def get_height(self) -> int:
+        """Return current height of the plant."""
+        return self._height
 
     def set_height(self, height: int) -> None:
-        """Set the height, rejecting negative values."""
-        if height >= 0:
-            self.height = height
-            print(f"Height updated: {self.height}cm [OK]")
+        """Set plant height, rejecting negative values."""
+        if height < 0:
+            print(
+                "Invalid operation attempted: "
+                f"height {height}cm [REJECTED]"
+            )
+            print("Security: Negative height rejected")
+            print()
         else:
-            print(f"Invalid operation attempted: height {height}cm [REJECTED]")
-            print("Security: Negative height rejected\n")
-            return
+            self._height = height
+            print(f"Height updated: {height}cm [OK]")
+
+    def get_age(self) -> int:
+        """Return current age of the plant."""
+        return self._age
 
     def set_age(self, age: int) -> None:
-        """Set the age, rejecting negative values."""
-        if age >= 0:
-            self.age = age
-            print(f"Age updated: {self.age} days [OK]\n")
+        """Set plant age, rejecting negative values."""
+        if age < 0:
+            print(
+                    "Invalid operation attempted: "
+                    f"age {age} days [REJECTED]"
+            )
+            print("Security: Negative days rejected")
+            print()
         else:
-            print(f"Invalid operation attempted: age {age} days [REJECTED]")
-            print("Security: Negative age rejected\n")
-            return 
+            self._age = age
+            print(f"Age updated: {age} days [OK]")
+            print()
 
-    def get_info(self) -> None:
-        """Print the plant's name, height, and age."""
-        print(f"Current plant: {self.name} ({self.height}cm, {self.age} days)")
+    def display_info(self) -> None:
+        """Display current plant information."""
+        print(
+            f"Current plant: {self.name} "
+            f"{self.get_height()}cm {self.get_age()} days"
+        )
 
 
 def ft_garden_security() -> None:
-    """Test the plant security system with invalid inputs."""
-    print("=== Garden Security System ===")
-    plant = SecurePlant("Rose", 25, 30)
-    plant.set_height(-5)
-    plant.set_age(-10)
-    plant.get_info()
+    """Test SecurePlant with valid & invalid operations."""
+    print("=== Garden Security ===")
+    rose = SecurePlant("Rose")
+    print(f"Plant created: {rose.name}")
+    rose.set_height(25)
+    rose.set_age(30)
+    rose.set_age(-5)
+    rose.display_info()
 
 
 if __name__ == "__main__":
