@@ -7,13 +7,13 @@ class Plant:
         self.height = height
         self.age = age
 
-    def get_info(self) -> str:
-        """Return the plant's name, height, and age."""
-        return f"Created: {self.name}: ({self.height}cm, {self.age} days)"
+    def display_info(self) -> None:
+        """Display the plant's info."""
+        print(f"Created: {self.name} ({self.height}cm, {self.age} days)")
 
 
 def ft_plant_factory() -> None:
-    """Create several plants and display their info and total count."""
+    """Create plants and display their info and total count."""
     plant_data = [
         ("Rose", 25, 30),
         ("Oak", 15, 20),
@@ -26,7 +26,7 @@ def ft_plant_factory() -> None:
     total_plants = 0
     for data in plant_data:
         new_plant = Plant(*data)
-        print(new_plant.get_info())
+        new_plant.display_info()
         total_plants += 1
     print(f"\nTotal plants created: {total_plants}")
 
