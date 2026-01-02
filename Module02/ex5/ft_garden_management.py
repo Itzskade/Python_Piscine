@@ -41,7 +41,7 @@ class GardenManager:
                     if plant is None:
                         raise WaterPlants("Cannot water invalid plant!")
                     if tank['water'] < amount:
-                        raise WaterPlants(f"Not enough water! Need {amount}, have {tank['water']}")
+                        raise WaterPlants(f"Not enough water! {tank['water']} remaining")
                     plant['water'] += amount
                     tank['water'] -= amount
                     print(f"Watering {plant['name']} - success")
@@ -58,21 +58,27 @@ class GardenManager:
                 if plant is None:
                     raise CheckHealth("Invalid plant!")
                 if plant['water'] < 1:
-                    raise CheckHealth(f"Error checking {plant['name']}: Water level {plant['water']} is too low (min 1)")
+                    raise CheckHealth(f"Error checking {plant['name']}: "
+                                      f"Water level {plant['water']} is too low (min 1)")
                 if plant['water'] > 10:
-                    raise CheckHealth(f"Error checking {plant['name']}: Water level {plant['water']} is too high (max 10)")
+                    raise CheckHealth(f"Error checking {plant['name']}: "
+                                      f"Water level {plant['water']} is too high (max 10)")
                 if plant['sunlight'] < 2:
-                    raise CheckHealth(f"Error checking {plant['name']}: Sunlight hours {plant['sunlight']} is too low (min 2)")
+                    raise CheckHealth(f"Error checking {plant['name']}: "
+                                      f"Sunlight hours {plant['sunlight']} is too low (min 2)")
                 if plant['sunlight'] > 12:
-                    raise CheckHealth(f"Error checking {plant['name']}: Sunlight hours {plant['sunlight']} is too high (max 12)")
-                print(f"{plant['name']}: healthy (water: {plant['water']}, sun: {plant['sunlight']})")
+                    raise CheckHealth(f"Error checking {plant['name']}: "
+                                      f"Sunlight hours {plant['sunlight']} is too high (max 12)")
+                print(f"{plant['name']}: healthy (water: {plant['water']}, "
+                      f"sun: {plant['sunlight']})")
             except CheckHealth as e:
                 print(e)
 
     def check_tank(self, tank: dict, amount: int) -> None:
         """Check if tank can supply and receive water safely."""
         if tank['water'] + amount > 200:
-            raise GardenError("Caught GardenError: Could not be filled due to the risk of overflow")
+            raise GardenError("Caught GardenError: "
+                              "Could not be filled due to the risk of overflow")
         print("Tank could be filled")
 
     def fill_tank(self, tank: dict, amount: int) -> None:
