@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 class Plant:
-    """Represnets name, height(cm) and age(days) of a plant"""
+    """Represents name, height(cm) and age(days) of a plant"""
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
@@ -15,14 +15,16 @@ class Plant:
 
 class FloweringPlant(Plant):
     """Plant with flowers and color."""
-    def __init__(self, name: str, height: int, age: int, color: str) -> None:
+    def __init__(self, name: str, height: int, 
+                 age: int, color: str) -> None:
         super().__init__(name, height, age)
         self.color = color
 
 
 class PrizeFlower(FloweringPlant):
     """Flowering plant with prize points"""
-    def __init__(self, name: str, height: int, age: int, color: str, points: int) -> None:
+    def __init__(self, name: str, height: int, 
+                 age: int, color: str, points: int) -> None:
         super().__init__(name, height, age, color)
         self.prize_points = points
 
@@ -68,14 +70,14 @@ class GardenManager:
 
     def grow_all(self, cm: int) -> None:
         """Grow all plants by cm."""
-        print(f"\n{self.owner_name} is helping all plants grow...")
+        print(f"{self.owner_name} is helping all plants grow...")
         for plant in self.plants:
             plant.grow(cm)
             self.total_growth += cm
 
     def get_report(self) -> None:
         """Print garden summary."""
-        print(f"\n=== {self.owner_name}'s Garden Report ===")
+        print(f"=== {self.owner_name}'s Garden Report ===")
         count = 0
         for plant in self.plants:
             count += 1
@@ -85,12 +87,17 @@ class GardenManager:
             if isinstance(plant, PrizeFlower):
                 info += f", prize points: {plant.prize_points}"
             print(info)
-        print(f"\nPlants added: {count}, Total growth: {self.total_growth}cm")
+        print()
+        print(f"Plants added: {count}, Total growth: {self.total_growth}cm")
         types = self.stats.count_types(self.plants)
-        print(f"Plant types: {types['regular']} regular, {types['flowering']} flowering, {types['prize']} prize flowers\n")
+        print(
+            f"Plant types: {types['regular']} regular, {types['flowering']} "
+            f"flowering, {types['prize']} prize flowers"
+        )
+        print()
 
     @staticmethod
-    def validate_height(plants: int) -> bool:
+    def validate_height(plants: list) -> bool:
         """Check if all plants have positive height."""
         for plant in plants:
             if plant.height <= 0:
@@ -105,7 +112,8 @@ class GardenManager:
 
 def ft_garden_analytics() -> None:
     """Demo of GardenManager system."""
-    print("=== Garden Management System Demo ===\n")
+    print("=== Garden Management System Demo ===")
+    print()
 
     alice = GardenManager("Alice")
     bob = GardenManager("Bob")
@@ -113,9 +121,14 @@ def ft_garden_analytics() -> None:
     alice.add_plant(FloweringPlant("Rose", 25, 30, "red"))
     alice.add_plant(PrizeFlower("Sunflower", 50, 45, "yellow", 10))
     bob.add_plant(FloweringPlant("Tulip", 72, 10, "pink"))
+    print()
     alice.grow_all(1)
+    print()
     alice.get_report()
-    print(f"Height validation test: {GardenManager.validate_height(alice.plants)}")
+    print(
+        "Height validation test: "
+        f"{GardenManager.validate_height(alice.plants)}"
+    )
     alice_score = alice.stats.calculate_score(alice.plants)
     bob_score   = bob.stats.calculate_score(bob.plants)
     print(f"Garden scores Alice: {alice_score}, Bob: {bob_score}")
