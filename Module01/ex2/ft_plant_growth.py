@@ -28,7 +28,7 @@ def ft_plant_growth() -> None:
     print("=== Day 1 ===")
     print(rose.get_info())
 
-    for day in range(2, 8):
+    for day in range(1, 7):
         rose.age_one_day()
         rose.grow(1)
 
