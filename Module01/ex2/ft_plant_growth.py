@@ -6,38 +6,47 @@ class Plant:
         self.name = name
         self.height = height
         self.age = age
-        self.initial_height = height
 
     def grow(self, cm: int) -> None:
         """Increase the plant's height by the specified number of centimeters."""
         self.height += cm
 
-    def age_one_day(self) -> None:
+    def age_up(self) -> None:
         """Increment the plant's age by one day."""
         self.age += 1
 
-    def get_info(self) -> str:
-        """Return a string summarizing the plant's name, height, and age."""
-        return f"{self.name}: {self.height}cm, {self.age} days old"
+    def get_info(self) -> None:
+        """Display plant info"""
+        print(f"{self.name}: {self.height}cm, {self.age} days old")
 
 
-def ft_plant_growth() -> None:
-    """Simulate a week's growth and show the plant's info and total growth.""""
-    rose = Plant("Rose", 25, 30)
+def ft_plant_growth():
+    """Simulate a week's growth and show the plant's info and weeks growth"""
+    rose = Plant('Rose', 25, 30)
+    sunflower = Plant('Sunflower', 80, 45)
+    cactus = Plant('Cactus', 15, 120)
 
-    print("=== Day 1 ===")
-    print(rose.get_info())
+    plants = (rose, sunflower, cactus)
 
-    for day in range(1, 7):
-        rose.age_one_day()
-        rose.grow(1)
+    selected = rose
+    days = 14
+    grow = 1
+    initial_height = selected.height
 
-    print("=== Day 7 ===")
-    print(rose.get_info())
+    print(f"=== Day 1 ===")
+    selected.get_info()
 
-    growth = rose.height - rose.initial_height
-    print(f"Growth this week: +{growth}cm")
+    for day in range(2, days + 1):
+        for plant in plants:
+            plant.grow(grow)
+            plant.age_up()
+        if day % 7 == 0:
+            print(f"=== Day {day} ===")
+            selected.get_info()
+            growth = selected.height - initial_height
+            initial_height = selected.height
+            print(f"Growth this week: +{growth}cm")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ft_plant_growth()
