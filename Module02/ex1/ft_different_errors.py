@@ -23,8 +23,8 @@ def garden_operations() -> dict:
     return operations
 
 
-def test_error_types(
-    value: int, a: int, b: int, filename: str, dictionary: dict, key: str) -> None:
+def test_error_types(value: int, a: int, b: int, filename: str,
+                     dictionary: dict, key: str) -> None:
     """Test different Python error types and handle them."""
     operations = garden_operations()
 
