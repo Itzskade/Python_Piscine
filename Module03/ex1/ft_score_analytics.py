@@ -18,7 +18,8 @@ def ft_score_analytics() -> None:
     print("=== Player Score Analytics ===")
     scores = put_numbers_on_list()
     if len(sys.argv) < 2:
-        print("No scores provided. Usage: python3 ft_score_analytics.py <score1> <score2> ...")
+        print("No scores provided. Usage: "
+              "python3 ft_score_analytics.py <score1> <score2> ...")
     else:
         print(f"Scores processed: {scores}" )
         print(f"Total players: {len(scores)}")
