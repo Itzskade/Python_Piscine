@@ -30,7 +30,8 @@ def test_watering_system() -> None:
     plant_list = ['tomato', 'lettuce', 'carrots']
     error_list = ['tomato', None, 'carrots']
 
-    print("=== Garden Watering System ===\n")
+    print("=== Garden Watering System ===")
+    print()
     print("Testing normal watering...")
     water_plants(plant_list)
     print()
