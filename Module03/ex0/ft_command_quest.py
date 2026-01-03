@@ -3,20 +3,23 @@
 import sys
 
 def ft_command_quest() -> None:
+    """Receive and print command-line arguments."""
     print("=== Command Quest ===")
-    if len(sys.argv) < 2:
+    ac = len(sys.argv)
+    if ac < 2:
         print("No arguments provided!")
+
     prog_name = sys.argv[0]
-    if len(prog_name) > 1 and prog_name[0] == '.' and prog_name[1] == '/':
-        prog_name = prog_name[2:]
     print(f"Program name: {prog_name}")
-    if len(sys.argv) > 1:
-        print(f"Arguments received: {len(sys.argv) - 1}")
-        i = 1
-        while i < len(sys.argv):
-            print(f"Argument {i}: {sys.argv[i]}")
-            i += 1
-    print(f"Total arguments: {len(sys.argv)}")
+    if ac > 1:
+        print(f"Arguments received: {ac - 1}")
+
+    i = 1
+    while i < ac:
+        print(f"Argument {i}: {sys.argv[i]}")
+        i += 1
+    print(f"Total arguments: {ac}")
+
 
 if __name__ == '__main__':
     ft_command_quest()
