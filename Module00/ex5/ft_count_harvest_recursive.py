@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_count_harvest_recursive.py                      :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmarin-n <rmarin-n@student.42barcelona.co  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/26 08:25:58 by rmarin-n          #+#    #+#              #
-#    Updated: 2025/12/26 08:25:59 by rmarin-n         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 def ft_count_harvest_recursive() -> None:
     days = int(input("Days until harvest: "))
     
