@@ -89,7 +89,8 @@ def build_inventory(player_items: dict, catalog: dict) -> dict:
     return inventory
 
 
-def transfer_item(sender: dict, receiver: dict, item_name: str, quantity: int) -> None:
+def transfer_item(sender: dict, receiver: dict, 
+                  item_name: str, quantity: int) -> None:
     """Transfers quantity of item_name from sender to receiver inventories."""
     sender_inv = sender['inventory']
     item = sender_inv.get(item_name)
@@ -108,11 +109,14 @@ def transfer_item(sender: dict, receiver: dict, item_name: str, quantity: int) -
         new['quantity'] = quantity
         receiver['inventory'].update({item_name: new})
 
-    print(f"=== Transaction: {sender['name']} gives {receiver['name']} {quantity} {item_name}s ===")
+    print(f"=== Transaction: {sender['name']} gives "
+          f"{receiver['name']} {quantity} {item_name}s ===")
     print("Transaction successful!\n")
     print("=== Updated Inventories ===")
     print(f"{sender['name']} {item_name}s: {sender_inv[item_name]['quantity']}")
-    print(f"{receiver['name']} {item_name}s: {receiver['inventory'][item_name]['quantity']}\n")
+    print(f"{receiver['name']} {item_name}s: "
+          f"{receiver['inventory'][item_name]['quantity']}")
+    print()
 
 
 def show_inventory(inventory: dict, player_name: str) -> None:
@@ -127,21 +131,22 @@ def show_inventory(inventory: dict, player_name: str) -> None:
         stack = item.get('quantity') * item.get('value')
         total_value += stack
         total_items += item.get('quantity')
-        category = item.get('category')
-        current = categories.get(category)
+        cat = item.get('category')
+        current = categories.get(cat)
 
-        categories.update({category: categories.get(category, 0) + item['quantity']})
-        print(f"{item['name']} ({item['category']}, {item['rarity']}) {item['quantity']}x @ {item['value']} gold each = {stack} gold")
+        categories.update({cat: categories.get(cat, 0) + item['quantity']})
+        print(f"{item['name']} ({item['category']}, {item['rarity']}) "
+              f"{item['quantity']}x @ {item['value']} gold each = {stack} gold")
 
     print(f"\nInventory value: {total_value} gold")
     print(f"Item count: {total_items} items")
     print("Categories: ", end="")
 
     first = True
-    for category in categories.keys():
+    for cat in categories.keys():
         if not first:
             print(", ", end="")
-        print(f"{category}({categories[category]})", end="")
+        print(f"{cat}({categories[cat]})", end="")
         first = False
     print("\n")
 
@@ -152,10 +157,17 @@ def ft_inventory_system() -> None:
     catalog = inventories['catalog']
     players_data = inventories['players']
 
-    alice   = {'name': 'Alice', 'inventory': build_inventory(players_data['alice']['items'], catalog)}
-    bob     = {'name': 'Bob', 'inventory': build_inventory(players_data['bob']['items'], catalog)}
-    charlie = {'name': 'Charlie', 'inventory': build_inventory(players_data['charlie']['items'], catalog)}
-    diana   = {'name': 'Diana', 'inventory': build_inventory(players_data['diana']['items'], catalog)}
+    players = {}
+    for name in ['alice', 'bob', 'charlie', 'diana']:
+        players[name] = {
+            'name': name.capitalize(),
+            'inventory': build_inventory(players_data[name]['items'], catalog)
+        }
+
+    alice = players['alice']
+    bob = players['bob']
+    charlie = players['charlie']
+    diana = players['diana']
 
     print("=== Player Inventory System ===\n")
 
