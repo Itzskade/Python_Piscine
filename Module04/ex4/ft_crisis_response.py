@@ -6,7 +6,7 @@ def catch_errors(filename: str) -> None:
     if filename == 'standard_archive.txt': 
         print(f"ROUTINE ACCESS: Attempting access to '{filename}'...")
     else:
-        print(f"CRISIS ALERT: Attempting access to '{filename}'..." , file=sys.stderr)
+        print(f"CRISIS ALERT: Attempting access to '{filename}'...", file=sys.stderr)
 
     try:
         with open(filename, 'r') as vault:
