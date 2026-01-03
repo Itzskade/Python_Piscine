@@ -3,6 +3,7 @@
 import sys
 
 def catch_errors(filename: str) -> None:
+    """Attempt to read a file and handle errors with logging."""
     if filename == 'standard_archive.txt': 
         print(f"ROUTINE ACCESS: Attempting access to '{filename}'...")
     else:
@@ -24,6 +25,7 @@ def catch_errors(filename: str) -> None:
         print("STATUS: Crisis handled, \n")
 
 def ft_crisis_response() -> None:
+    """Run the crisis response system on multiple archives."""
     print("=== CYBER ARCHIVES - CRISIS RESPONSE SYSTEM ===\n")
     catch_errors('lost_archive.txt')
     catch_errors('classified_vault.txt')
