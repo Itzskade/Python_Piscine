@@ -22,7 +22,8 @@ def fill_tank(tank: dict], amount: int): -> None:
     if tank['water'] + amount > 200:
         raise WaterError("Could not be filled due to the risk of overflow.")
     tank['water'] += amount
-    print(f"Tank filled correctly!\nCurrent: {tank['water']}")
+    print(f"Tank filled correctly!")
+    print(f"Current: {tank['water']}")
     
 #check plant status by water
 def check_plant(plant: dict, irrigate: int, tank): -> None:
