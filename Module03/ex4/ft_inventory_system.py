@@ -2,7 +2,7 @@
 
 def create_inventories() -> dict:
     """
-    Creates a general data_base based on
+    Creates inventories data_base based on
     data_generator given on the exercise
     """
     inventories = {
