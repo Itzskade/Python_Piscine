@@ -56,5 +56,6 @@ def ft_coordinate_system() -> None:
         print(f"Player at x={x}, y={y}, z={z}")
         print(f"Coordinates: X={x}, Z={z}, Y={y}")
 
+
 if __name__ == "__main__":
     ft_coordinate_system()
