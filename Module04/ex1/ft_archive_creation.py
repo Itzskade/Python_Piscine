@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 def create_file():
+    """Create a new file 'new_discovery.txt' and return file object."""
     file = open('new_discovery.txt', 'w')
     print("Initializing new storage unit: new_discovery.txt")
     print("Storage unit created successfully...\n")
@@ -8,6 +9,7 @@ def create_file():
 
 
 def write_file(file) -> None:
+    """Write predefined entries into the given file."""
     entries = [
             "New quantum algorith discovered",
             "Efficiency increased by 347 %",
@@ -22,6 +24,7 @@ def write_file(file) -> None:
     file.close()
 
 def ft_archive_creation() -> None:
+    """Run the preservation system to create a new archive."""
     print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===\n")
     file = create_file()
     write_file(file)
