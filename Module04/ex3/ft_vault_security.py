@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 def secure_extraction() -> None:
+    """Read and display contents of 'classified_data.txt' securely."""
     print("SECURE EXTRACTION:")
     with open('classified_data.txt', 'r') as vault:
         reading = vault.read()
@@ -9,6 +10,7 @@ def secure_extraction() -> None:
 
 
 def secure_preservation() -> None:
+    """Write new security protocols into 'security_protocols.txt'."""
     print("SECURE PRESERVATION:")
     with open('security_protocols.txt', 'w') as vault:
         vault.write("[CLASSIFIED] New security protocols archived")
@@ -16,6 +18,7 @@ def secure_preservation() -> None:
 
 
 def ft_vault_security() -> None:
+    """Run the vault security system with extraction and preservation."""
     print("=== CYBER ARCHIVES - VAULT SECURITY SYSTEM ===")
 
     print("Initiating secure vault access...\n")
