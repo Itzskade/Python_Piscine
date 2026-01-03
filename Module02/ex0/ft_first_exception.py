@@ -3,7 +3,7 @@
 def check_temperature(temp_str: str) -> None:
     """Check if temperature is valid for plants (0-40ºC)."""
     try:
-        tmp = int(temp_str)
+        temp = int(temp_str)
     except ValueError:
         print(f"Error: {temp_str} no es un número")
         return None
