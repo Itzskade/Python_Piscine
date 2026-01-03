@@ -28,7 +28,8 @@ def test_error_types(value: int, a: int, b: int, filename: str,
     """Test different Python error types and handle them."""
     operations = garden_operations()
 
-    print("=== Garden Error Types Error ===\n")
+    print("=== Garden Error Types Error ===")
+    print()
     try:
         print("Testing ValueError...")
         operations["value_error"](value)
@@ -62,8 +63,8 @@ def test_error_types(value: int, a: int, b: int, filename: str,
         operations["value_error"](value)
     except (ValueError, ZeroDivisionError, FileNotFoundError, KeyError):
         print("Caught an error, but program continues!")
-
-    print("\nAll Error types tested successfully!")
+    print()
+    print("All Error types tested successfully!")
 
 
 def ft_different_errors() -> None:
