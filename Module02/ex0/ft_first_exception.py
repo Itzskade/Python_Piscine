@@ -22,7 +22,7 @@ def ft_first_exception():
     tests = [20, 100, -50, "abc"]
     for test in tests:
         print(f"Testing temperature: {test}")
-        result = check_temperature(test)
+        check_temperature(test)
     print("\nAll test completed - program didn't crash!")
 
 
