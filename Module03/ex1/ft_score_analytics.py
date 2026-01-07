@@ -20,7 +20,7 @@ def ft_score_analytics() -> None:
     """Print basic statistics for given scores."""
     print("=== Player Score Analytics ===")
     scores = new_list()
-    if len(sys.argv) < 2:
+    if scores is not None:
         print("No scores provided. Usage: "
               "python3 ft_score_analytics.py <score1> <score2> ...")
     else:
