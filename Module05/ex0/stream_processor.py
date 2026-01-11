@@ -113,7 +113,7 @@ class LogProcessor(DataProcessor):
         return "[INFO] INFO level detected: System ready"
 
 
-def run_numeric_processor():
+def run_numeric_processor() -> None:
     """Run numeric processor demo."""
     print("Initializing Numeric Processor...")
     num_proc = NumericProcessor()
@@ -129,7 +129,7 @@ def run_numeric_processor():
     print()
 
 
-def run_text_processor():
+def run_text_processor() -> None:
     """Run text processor demo."""
     print("Initializing Text Processor...")
     text_proc = TextProcessor()
@@ -145,7 +145,7 @@ def run_text_processor():
     print()
 
 
-def run_log_processor():
+def run_log_processor() -> None:
     """Run log processor demo."""
     print("Initializing Log Processor...")
     log_proc = LogProcessor()
@@ -161,7 +161,7 @@ def run_log_processor():
     print()
 
 
-def test_processor_polymorphic():
+def test_processor_polymorphic() -> None:
     """Show polymorphic processing."""
     print("=== Polymorphic Processing Demo ===")
     print("Processing multiple data types through same interface...")
@@ -189,19 +189,16 @@ def test_processor_polymorphic():
     print()
 
 
-def stream_processor():
+def stream_processor() -> None:
     """Main execution flow."""
     print("=== CODE NEXUS - DATA PROCESSOR FOUNDATION ===")
     print()
-
     run_numeric_processor()
     run_text_processor()
     run_log_processor()
-
     test_processor_polymorphic()
-
     print("Foundation systems online. Nexus ready for advanced streams.")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     stream_processor()
