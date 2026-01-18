@@ -6,7 +6,7 @@ from ex1.ArtifactCard import ArtifactCard as Artifact, ArtifactError
 from ex1.Deck import Deck, DeckError
 
 
-def main():
+def main() -> None:
     print("=== DataDeck Deck Builder ===\n")
 
     print("Building deck with different card types...")
