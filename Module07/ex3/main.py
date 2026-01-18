@@ -1,14 +1,15 @@
+from typing import List
 from ex3.FantasyCardFactory import FantasyCardFactory as Factory
 from ex3.AggressiveStrategy import AggressiveStrategy as Strategy
 from ex3.GameEngine import GameEngine
 
 
-def format_card_list(cards):
+def format_card_list(cards) -> List[str]:
     """Transform cards in format: Name (cost)."""
     return [f"{card.name} ({card.cost})" for card in cards]
 
 
-def main():
+def main() -> None:
     print("=== DataDeck Game Engine ===\n")
     print("Configuring Fantasy Card Game...")
 
@@ -54,3 +55,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
