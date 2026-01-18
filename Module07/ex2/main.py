@@ -3,7 +3,7 @@
 from ex2.EliteCard import EliteCard as Elite
 
 
-def main():
+def main() -> None:
     print("=== DataDeck Ability System ===\n")
 
     print("EliteCard capabilities:")
