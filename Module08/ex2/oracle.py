@@ -16,10 +16,10 @@ def show_status(required_vars):
     mode, db_url, api_key, log_lvl, zion_ep = required_vars
     print("┌─────────── Configuration loaded: ───────────┐")
     print(f"  Mode         : {mode}")
-    print(f"  Database     : {db_url}")
-    print(f"  API Key      : {api_key}")
+    print("  Database      : Connected to local instance")
+    print("  API Key       : Authenticated")
     print(f"  Log Level    : {log_lvl}")
-    print(f"  Zion Network : {zion_ep}")
+    print("  Zion Network  : Online")
     print("└─────────────────────────────────────────────┘")
 
 
