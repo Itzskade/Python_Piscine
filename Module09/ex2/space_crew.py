@@ -166,7 +166,7 @@ def main():
             print(e['msg'].replace("Value error, Must", "Mission must"))
 
     try:
-        from generated_data.space_missions import SPACE_MISSIONS
+        from tools.generated_data.space_missions import SPACE_MISSIONS
 
     except ImportError:
         print("Could not import SPACE_MISSIONS")
