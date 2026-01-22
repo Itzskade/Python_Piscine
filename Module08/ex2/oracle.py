@@ -17,7 +17,7 @@ def show_status(required_vars):
     print("┌─────────── Configuration loaded: ───────────┐")
     print(f"  Mode         : {mode}")
     db_status = "Connected to local instance" if db_url else "Not connected"
-    print("  Database      : {db_status}")
+    print(f"  Database      : {db_status}")
     api_status =  "Authenticated" if api_key else "Not authenticated"
     print(f"  API Key      : {api_status}")
     print(f"  Log Level    : {log_lvl}")
