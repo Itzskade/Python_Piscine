@@ -1,12 +1,20 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict
+from enum import Enum
+
+
+class Rarity(Enum):
+    COMMON = "Common"
+    RARE = "Rare"
+    EPIC = "Epic"
+    LEGENDARY = "Legendary"
 
 
 class Card(ABC):
     """Base class for all cards."""
-    def __init__(self, name: str, cost: int, rarity: str) -> None:
+    def __init__(self, name: str, cost: int, rarity: Rarity) -> None:
         """Create a card with name, cost and rarity."""
-        if cost < 0:
+        if not isinstance(cost, int) or cost < 0:
             raise ValueError("Can't be negative integer")
         self.name = name
         self.cost = cost
@@ -22,7 +30,7 @@ class Card(ABC):
         info = {
                 'name': self.name,
                 'cost': self.cost,
-                'rarity': self.rarity
+                'rarity': self.rarity.value
                 }
         return info
 
