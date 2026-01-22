@@ -104,7 +104,7 @@ def main():
             print(e['msg'].replace("Value error, ", ""))
 
     try:
-        from generated_data.alien_contacts import ALIEN_CONTACTS
+        from tools.generated_data.alien_contacts import ALIEN_CONTACTS
 
     except ImportError:
         print("Could not import ALIEN_CONTACTS")
