@@ -73,7 +73,7 @@ def main() -> None:
             print(e['msg'])
 
     try:
-        from generated_data.space_stations import SPACE_STATIONS
+        from tools.generated_data.space_stations import SPACE_STATIONS
 
     except ImportError:
         print("Could not import SPACE_STATIONS")
