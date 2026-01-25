@@ -90,4 +90,4 @@ Desarrollado como parte del aprendizaje de Python en un entorno educativo enfoca
 
 ## 📧 Contacto
 
-Añade aquí tu correo o perfil de estudiante si lo deseas.
+[rmarin-n@student.42barcelona.com](mailto:rmarin-n@student.42barcelona.com)
