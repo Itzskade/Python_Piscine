@@ -64,4 +64,23 @@ Como Ingeniero de Datos, aprenderás a **construir sistemas de datos robustos, m
 |-------------|---------------|-----------|-----------|------------|
 | 00          | [ex0](./ex0)  | ✅ Sí     | ✅ Sí     | ✔️         |
 | 01          | [ex01](./ex01)| ✅ Sí     | ✅ Sí     | ✔️         |
-| 02          | [ex02](./ex)
+| 02          | [ex02](./ex02)| ✅ Sí     | ✅ Sí     | ✔️         |
+
+---
+
+## 📜 Licencia
+
+Este proyecto forma parte de un programa educativo.  
+El código se entrega con fines académicos y de referencia personal únicamente.
+
+---
+
+## 🙋 Autor
+
+Desarrollado como parte del **Programa de Ingeniería de Datos Matrix**.
+
+---
+
+## 📧 Contacto
+
+[rmarin-n@student.42barcelona.com](mailto:rmarin-n@student.42barcelona.com)
