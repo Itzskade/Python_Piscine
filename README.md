@@ -22,7 +22,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 ### Exercises
 | Exercise | Description | Directory | File |
 |---------|-------------|-----------|------|
-| 00 | Garden welcome message | ex0/ | `ft_hello_garden.py` |
+| 00 | Garden welcome message | [ex0](./Module00/ex0/) | `ft_hello_garden.py` |
 | 01 | Calculate plot area | ex1/ | `ft_plot_area.py` |
 | 02 | Total harvest calculation | ex2/ | `ft_harvest_total.py` |
 | 03 | Plant age check | ex3/ | `ft_plant_age.py` |
