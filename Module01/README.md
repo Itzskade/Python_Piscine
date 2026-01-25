@@ -29,13 +29,13 @@ This project builds upon Python fundamentals and introduces **Object-Oriented Pr
 
 | Exercise | Description                                   | Directory | Deliverable File              |
 |---------:|-----------------------------------------------|-----------|-------------------------------|
-| 00       | Program entry point and basic execution       | ex0/      | ft_garden_intro.py            |
-| 01       | Garden data organizer using classes           | ex1/      | ft_garden_data.py             |
-| 02       | Plant growth simulator                        | ex2/      | ft_plant_growth.py            |
-| 03       | Plant factory and object initialization       | ex3/      | ft_plant_factory.py           |
-| 04       | Garden security and data encapsulation        | ex4/      | ft_garden_security.py         |
-| 05       | Specialized plant types with inheritance      | ex5/      | ft_plant_types.py             |
-| 06       | Garden analytics and management platform      | ex6/      | ft_garden_analytics.py        |
+| 00       | Program entry point and basic execution       | ex0/      | `ft_garden_intro.py`          |
+| 01       | Garden data organizer using classes           | ex1/      | `ft_garden_data.py`           |
+| 02       | Plant growth simulator                        | ex2/      | `ft_plant_growth.py`          |
+| 03       | Plant factory and object initialization       | ex3/      | `ft_plant_factory.py`         |
+| 04       | Garden security and data encapsulation        | ex4/      | `ft_garden_security.py`       |
+| 05       | Specialized plant types with inheritance      | ex5/      | `ft_plant_types.py`           |
+| 06       | Garden analytics and management platform      | ex6/      | `ft_garden_analytics.py`      |
 
 ---
 
