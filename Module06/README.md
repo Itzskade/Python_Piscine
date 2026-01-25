@@ -32,10 +32,10 @@ As a Python Alchemist, you will **organize scattered code into magical packages*
 
 | Exercise | Description                               | File/Folder                  |
 |----------|-------------------------------------------|-------------------------------|
-| 00       | The Sacred Scroll (__init__.py)           | ft_sacred_scroll.py / alchemy/__init__.py / alchemy/elements.py |
-| 01       | Transmutation by Import                    | ft_import_transmutation.py / alchemy/potions.py |
-| 02       | The Great Debate of Paths                  | ft_pathway_debate.py / alchemy/transmutation/* |
-| 03       | Breaking the Circular Curse                | ft_circular_curse.py / alchemy/grimoire/* |
+| 00       | The Sacred Scroll (__init__.py)           | `ft_sacred_scroll.py` / alchemy/`__init__.py` / alchemy/`elements.py` |
+| 01       | Transmutation by Import                    | `ft_import_transmutation.py` / alchemy/`potions.py` |
+| 02       | The Great Debate of Paths                  | `ft_pathway_debate.py` / alchemy/transmutation/* |
+| 03       | Breaking the Circular Curse                | `ft_circular_curse.py` / alchemy/grimoire/* |
 
 ---
 
