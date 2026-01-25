@@ -28,12 +28,12 @@ As a Data Archivist, you will learn to **recover, create, protect, and manage di
 ## 📁 Exercise Table
 
 | Exercise | Description                              | Directory | Deliverable File          |
-|----------|-----------------------------------------|-----------|---------------------------|
-| 00       | Recover ancient texts                     | ex0/      | ft_ancient_text.py        |
-| 01       | Create archive                            | ex1/      | ft_archive_creation.py    |
-| 02       | Manage data streams                       | ex2/      | ft_stream_management.py   |
-| 03       | Vault security                            | ex3/      | ft_vault_security.py      |
-| 04       | Crisis response                           | ex4/      | ft_crisis_response.py     |
+|----------|------------------------------------------|-----------|---------------------------|
+| 00       | Recover ancient texts                    | ex0/      | `ft_ancient_text.py`      |
+| 01       | Create archive                           | ex1/      | `ft_archive_creation.py`  |
+| 02       | Manage data streams                      | ex2/      | `ft_stream_management.py` |
+| 03       | Vault security                           | ex3/      | `ft_vault_security.py`    |
+| 04       | Crisis response                          | ex4/      | `ft_crisis_response.py`   |
 
 ---
 
