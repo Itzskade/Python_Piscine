@@ -26,16 +26,16 @@ The project covers essential concepts such as standard input/output, variables, 
 
 ## 📁 Exercise Table
 
-| Exercise | Description                                      | Directory | Deliverable File                               |
+| Exercise | Description                                       | Directory | Deliverable File                               |
 |----------:|--------------------------------------------------|------------|-----------------------------------------------|
-| 00        | Garden welcome message                           | ex0/       | ft_hello_garden.py                            |
-| 01        | Calculate plot area                              | ex1/       | ft_plot_area.py                               |
-| 02        | Total harvest calculation                       | ex2/       | ft_harvest_total.py                           |
-| 03        | Plant age check                                 | ex3/       | ft_plant_age.py                               |
-| 04        | Watering reminder                               | ex4/       | ft_water_reminder.py                          |
-| 05        | Count days until harvest (iterative & recursive)| ex5/       | ft_count_harvest_iterative.py<br>ft_count_harvest_recursive.py |
-| 06        | Garden summary                                  | ex6/       | ft_garden_summary.py                          |
-| 07        | Seed inventory with type annotations            | ex7/       | ft_seed_inventory.py                          |
+| 00        | Garden welcome message                           | ex0/       | `ft_hello_garden.py`                            |
+| 01        | Calculate plot area                              | ex1/       | `ft_plot_area.py`                               |
+| 02        | Total harvest calculation                        | ex2/       | `ft_harvest_total.py`                           |
+| 03        | Plant age check                                  | ex3/       | `ft_plant_age.py`                               |
+| 04        | Watering reminder                                | ex4/       | `ft_water_reminder.py`                          |
+| 05        | Count days until harvest (iterative & recursive) | ex5/       | `ft_count_harvest_iterative.py`<br>`ft_count_harvest_recursive.py` |
+| 06        | Garden summary                                   | ex6/       | `ft_garden_summary.py`                          |
+| 07        | Seed inventory with type annotations             | ex7/       | `ft_seed_inventory.py`                          |
 
 ---
 
