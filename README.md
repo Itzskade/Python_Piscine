@@ -202,3 +202,9 @@ This project is part of an educational program. Code is submitted for academic p
 
 ## 🙋 Author
 Compiled from **Python Piscine modules 00–10**.
+
+---
+
+## 📧 Contact
+
+[rmarin-n@student.42barcelona.com](mailto:rmarin-n@student.42barcelona.com)
