@@ -30,15 +30,15 @@ Construirás **PixelMetrics 3000**, una plataforma de analítica de juegos que p
 
 ## 📁 Tabla de Ejercicios
 
-| Ejercicio | Descripción                              | Directorio | Archivo Entregable            |
-|----------:|------------------------------------------|------------|-------------------------------|
-| 00        | Fundamentos de línea de comandos         | ex0/       | ft_command_quest.py           |
-| 01        | Analítica de puntuaciones con listas     | ex1/       | ft_score_analytics.py         |
-| 02        | Sistema de coordenadas 3D con tuples     | ex2/       | ft_coordinate_system.py       |
-| 03        | Seguimiento de logros con sets           | ex3/       | ft_achievement_tracker.py     |
-| 04        | Gestión de inventario con diccionarios   | ex4/       | ft_inventory_system.py        |
-| 05        | Streaming de datos con generadores       | ex5/       | ft_data_stream.py             |
-| 06        | Panel analítico con comprensiones        | ex6/       | ft_analytics_dashboard.py     |
+| Ejercicio | Descripción                              | Directorio | Archivo Entregable              |
+|----------:|------------------------------------------|------------|---------------------------------|
+| 00        | Fundamentos de línea de comandos         | ex0/       | `ft_command_quest.py`           |
+| 01        | Analítica de puntuaciones con listas     | ex1/       | `ft_score_analytics.py`         |
+| 02        | Sistema de coordenadas 3D con tuples     | ex2/       | `ft_coordinate_system.py`       |
+| 03        | Seguimiento de logros con sets           | ex3/       | `ft_achievement_tracker.py`     |
+| 04        | Gestión de inventario con diccionarios   | ex4/       | `ft_inventory_system.py`        |
+| 05        | Streaming de datos con generadores       | ex5/       | `ft_data_stream.py`             |
+| 06        | Panel analítico con comprensiones        | ex6/       | `ft_analytics_dashboard.py`     |
 
 ---
 
