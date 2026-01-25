@@ -27,11 +27,11 @@ Como Ingeniero de Datos, aprenderás a **construir sistemas de datos robustos, m
 
 ## 📁 Tabla de Ejercicios
 
-| Ejercicio | Descripción                             | Directorio | Archivos a Entregar                                   |
-|-----------|----------------------------------------|-----------|------------------------------------------------------|
-| 00        | Entrando en la Matrix                   | ex0/      | `construct.py`                                      |
-| 01        | Cargando Programas                       | ex01/     | `loading.py`, `requirements.txt`, `pyproject.toml`  |
-| 02        | Accediendo al Mainframe                  | ex02/     | `oracle.py`, `.env.example`, `.gitignore`           |
+| Ejercicio | Descripción                            | Directorio | Archivos a Entregar                                 |
+|-----------|----------------------------------------|------------|-----------------------------------------------------|
+| 00        | Entrando en la Matrix                  | ex0/       | `construct.py`                                      |
+| 01        | Cargando Programas                     | ex01/      | `loading.py`, `requirements.txt`, `pyproject.toml`  |
+| 02        | Accediendo al Mainframe                | ex02/      | `oracle.py`, `.env.example`, `.gitignore`           |
 
 ---
 
