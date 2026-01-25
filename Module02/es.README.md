@@ -29,14 +29,14 @@ Este proyecto forma parte de la progresión desde los fundamentos de Python haci
 
 ## 📁 Resumen de Ejercicios
 
-| Ejercicio | Descripción                                  | Directorio | Archivo a entregar             |
-|----------:|----------------------------------------------|------------|--------------------------------|
-| 00        | Pipeline de validación de datos agrícolas    | ex0/       | ft_first_exception.py          |
-| 01        | Manejo de diferentes tipos de errores        | ex1/       | ft_different_errors.py         |
-| 02        | Creación de excepciones personalizadas       | ex2/       | ft_custom_errors.py            |
-| 03        | Uso del bloque `finally` para limpieza       | ex3/       | ft_finally_block.py            |
-| 04        | Lanzamiento de errores propios               | ex4/       | ft_raise_errors.py             |
-| 05        | Sistema completo de gestión del huerto       | ex5/       | ft_garden_management.py        |
+| Ejercicio | Descripción                                  | Directorio | Archivo a entregar               |
+|-----------|----------------------------------------------|------------|----------------------------------|
+| 00        | Pipeline de validación de datos agrícolas    | ex0/       | `ft_first_exception.py`          |
+| 01        | Manejo de diferentes tipos de errores        | ex1/       | `ft_different_errors.py`         |
+| 02        | Creación de excepciones personalizadas       | ex2/       | `ft_custom_errors.py`            |
+| 03        | Uso del bloque `finally` para limpieza       | ex3/       | `ft_finally_block.py`            |
+| 04        | Lanzamiento de errores propios               | ex4/       | `ft_raise_errors.py`             |
+| 05        | Sistema completo de gestión del huerto       | ex5/       | `ft_garden_management.py`        |
 
 ---
 
