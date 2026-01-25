@@ -27,11 +27,11 @@ As a Flow Engineer, you will learn to **design adaptive digital organisms and pi
 
 ## 📁 Exercise Table
 
-| Exercise | Description                              | Directory | Deliverable File          |
-|----------|-----------------------------------------|-----------|---------------------------|
-| 00       | Data Processor Foundations               | ex0/      | `stream_processor.py`       |
-| 01       | Polymorphic Streams                      | ex1/      | `data_stream.py`            |
-| 02       | Nexus Pipeline Integration               | ex2/      | `nexus_pipeline.py`         |
+| Exercise | Description                              | Directory | Deliverable File         |
+|----------|------------------------------------------|-----------|--------------------------|
+| 00       | Data Processor Foundations               | ex0/      | `stream_processor.py`    |
+| 01       | Polymorphic Streams                      | ex1/      | `data_stream.py`         |
+| 02       | Nexus Pipeline Integration               | ex2/      | `nexus_pipeline.py`      |
 
 ---
 
