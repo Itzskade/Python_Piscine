@@ -25,49 +25,40 @@ As a Python Alchemist, you will **organize scattered code into magical packages*
 
 ---
 
-## 📁 Exercise Table
 
-| Exercise | Description                               | Directory | Deliverable File                |
-|----------|-------------------------------------------|-----------|--------------------------------|
-| 00       | The Sacred Scroll (__init__.py)           | ex0/      | ft_sacred_scroll.py            |
-| 01       | Transmutation by Import                    | ex1/      | ft_import_transmutation.py     |
-| 02       | The Great Debate of Paths                  | ex2/      | ft_pathway_debate.py           |
-| 03       | Breaking the Circular Curse                | ex3/      | ft_circular_curse.py           |
+---
+
+## 📁 Exercises Table
+
+| Exercise | Description                               | File/Folder                  |
+|----------|-------------------------------------------|-------------------------------|
+| 00       | The Sacred Scroll (__init__.py)           | ft_sacred_scroll.py / alchemy/__init__.py / alchemy/elements.py |
+| 01       | Transmutation by Import                    | ft_import_transmutation.py / alchemy/potions.py |
+| 02       | The Great Debate of Paths                  | ft_pathway_debate.py / alchemy/transmutation/* |
+| 03       | Breaking the Circular Curse                | ft_circular_curse.py / alchemy/grimoire/* |
 
 ---
 
 ## 📐 Rules and Best Practices
 
 - Python **3.10+** required  
-- One exercise per directory  
 - Only standard library modules allowed  
 - No `eval()`, `exec()`, or external packages  
 - Keep functions simple, returning **strings**  
-- Apply **type hints** everywhere  
-- Handle errors gracefully with `try/except`  
+- Apply **type hints** consistently  
+- Handle errors with `try/except`  
 - Use `__init__.py` to expose only intended functions  
+- Demonstrate understanding of absolute vs relative imports  
+- Avoid circular dependencies; if needed, use deferred imports or dependency injection  
 
 ---
 
 ## 📌 Recommendations
 
-- Think in terms of **package-level organization**, not just scripts  
-- Use imports to invoke only what you need  
-- Demonstrate understanding of absolute vs relative paths  
-- Prevent circular dependencies with deferred imports or dependency injection  
-- Validate all AI-generated code and understand every line  
-- Collaborate with peers to reinforce learning  
-
----
-
-## 📋 Project Status
-
-| 🧩 Exercise | Folder       | Completed | Submitted | Validation |
-|------------|---------------|-----------|-----------|------------|
-| 00         | [ex0](./ex0)  | ✅ Yes    | ✅ Yes    | ✔️         |
-| 01         | [ex1](./ex1)  | ✅ Yes    | ✅ Yes    | ✔️         |
-| 02         | [ex2](./ex2)  | ✅ Yes    | ✅ Yes    | ✔️         |
-| 03         | [ex3](./ex3)  | ✅ Yes    | ✅ Yes    | ✔️         |
+- Focus on **package-level organization**  
+- Use selective imports (`from ... import`) when appropriate  
+- Validate AI-generated code and understand it completely  
+- Collaborate with peers for better learning  
 
 ---
 
