@@ -30,10 +30,10 @@ Como Alquimista de Python, aprenderás a **organizar código disperso en paquete
 
 | Ejercicio | Descripción                               | Archivo/Carpeta                  |
 |-----------|-------------------------------------------|----------------------------------|
-| 00        | El Pergamino Sagrado (__init__.py)        | ft_sacred_scroll.py / alchemy/__init__.py / alchemy/elements.py |
-| 01        | Transmutación por Importación             | ft_import_transmutation.py / alchemy/potions.py |
-| 02        | El Gran Debate de las Rutas               | ft_pathway_debate.py / alchemy/transmutation/* |
-| 03        | Rompiendo la Maldición Circular           | ft_circular_curse.py / alchemy/grimoire/* |
+| 00        | El Pergamino Sagrado (__init__.py)        | `ft_sacred_scroll.py` / alchemy/`__init__.py` / alchemy/`elements.py` |
+| 01        | Transmutación por Importación             | `ft_import_transmutation.py` / alchemy/`potions.py` |
+| 02        | El Gran Debate de las Rutas               | `ft_pathway_debate.py` / alchemy/transmutation/* |
+| 03        | Rompiendo la Maldición Circular           | `ft_circular_curse.py` / alchemy/grimoire/* |
 
 ---
 
