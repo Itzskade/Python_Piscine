@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/score-100%20%2F%20100-success?color=%2312bab9&style=flat" />
 </div>
 
-# 🌱 Cultivating Code – Python Fundamentals
+# Cultivating Code – Module00
 ## Python Fundamentals Through Community Garden Data
 
 This repository contains all exercises for the **Cultivating Code** project, an introductory project teaching **Python 3 fundamentals** using realistic community garden scenarios.
@@ -33,7 +33,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 🌱 Cultivating Code – OOP
+# Cultivating Code – Module01
 ## Object-Oriented Harvesting Systems
 
 - Introduces **Object-Oriented Programming (OOP)** through a digital ecosystem for managing community gardens.
@@ -52,7 +52,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 🌿 Garden Guard
+# Garden Guard – Module02
 ## Data Engineering for Smart Agriculture
 
 - Focused on **robust Python exception handling** and fault-tolerant data pipelines.
@@ -70,7 +70,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 🎮 Data Quest
+# Data Quest – Module03
 ## Mastering Python Collections for Data Engineering
 
 - Focuses on **Python collections** (lists, tuples, sets, dicts) and generators.
@@ -89,7 +89,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 📂 Data Archivist
+# Data Archivist – Module04
 ## Digital Preservation in the Cyber Archives
 
 - Focus on **file operations, stream management, and digital security**.
@@ -106,7 +106,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 📂 Code Nexus
+# Code Nexus – Module05
 ## Polymorphic Data Flows in the Digital Matrix
 
 - Focus on **method overriding, polymorphism, and data pipeline design**.
@@ -120,7 +120,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 📜 The Codex
+# The Codex – Module06
 ## Mastering the Mysteries of Python Imports
 
 - Learn package initialization, import paths, absolute vs relative imports, and circular dependency handling.
@@ -135,7 +135,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 📂 DataDeck
+# DataDeck – Module07
 ## Master the Art of Abstract Card Architecture
 
 - Focuses on **abstract classes, multiple inheritance, interface composition** for card game systems.
@@ -151,7 +151,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 📂 The Matrix
+# The Matrix – Module08
 ## Welcome to the Real World of Data Engineering
 
 - Focuses on **virtual environments, package management, and secure pipelines**.
@@ -165,7 +165,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 📂 Cosmic Data
+# Cosmic Data – Module09
 ## Discover Pydantic Models & Validation
 
 - Learn **Pydantic BaseModel, custom validation, and nested structures** for robust pipelines.
@@ -179,7 +179,7 @@ This repository contains all exercises for the **Cultivating Code** project, an 
 
 ---
 
-# 🧙‍♂️ FuncMage
+# FuncMage – Module10
 ## Master the Ancient Arts of Functional Programming
 
 - Focuses on **lambda expressions, higher-order functions, closures, functools, and decorators**.
