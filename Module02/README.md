@@ -29,14 +29,14 @@ This project is part of the progression from Python fundamentals to **robust dat
 
 ## 📁 Exercises Overview
 
-| Exercise | Description                                      | Directory | File to Submit                 |
-|---------:|--------------------------------------------------|-----------|--------------------------------|
-| 00       | Agricultural data validation pipeline            | ex0/      | ft_first_exception.py          |
-| 01       | Handling different types of errors               | ex1/      | ft_different_errors.py         |
-| 02       | Creating custom exception types                  | ex2/      | ft_custom_errors.py            |
-| 03       | Using `finally` blocks for cleanup               | ex3/      | ft_finally_block.py            |
-| 04       | Raising your own errors                          | ex4/      | ft_raise_errors.py             |
-| 05       | Complete garden management system                | ex5/      | ft_garden_management.py        |
+| Exercise | Description                                      | Directory | File to Submit                   |
+|----------|--------------------------------------------------|-----------|----------------------------------|
+| 00       | Agricultural data validation pipeline            | ex0/      | `ft_first_exception.py`          |
+| 01       | Handling different types of errors               | ex1/      | `ft_different_errors.py`         |
+| 02       | Creating custom exception types                  | ex2/      | `ft_custom_errors.py`            |
+| 03       | Using `finally` blocks for cleanup               | ex3/      | `ft_finally_block.py`            |
+| 04       | Raising your own errors                          | ex4/      | `ft_raise_errors.py`             |
+| 05       | Complete garden management system                | ex5/      | `ft_garden_management.py`        |
 
 ---
 
