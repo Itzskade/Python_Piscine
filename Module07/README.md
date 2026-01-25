@@ -29,7 +29,7 @@ As a Deck Architect, you will learn to **design flexible, extensible trading car
 
 | Exercise | Description                     | Directory | Deliverable File              |
 |----------|--------------------------------|-----------|-------------------------------|
-| 00       | Card Foundation                 | ex0/      | Card.py, CreatureCard.py, main.py, __init__.py |
+| 00       | Card Foundation                 | ex0/      | Card.py, CreatureCard.py, main.py, \__init__.py |
 | 01       | Deck Builder                    | ex1/      | SpellCard.py, ArtifactCard.py, Deck.py, main.py, __init__.py |
 | 02       | Ability System                  | ex2/      | Combatable.py, Magical.py, EliteCard.py, main.py, __init__.py |
 | 03       | Game Engine                     | ex3/      | GameStrategy.py, CardFactory.py, AggressiveStrategy.py, FantasyCardFactory.py, GameEngine.py, main.py, __init__.py |
