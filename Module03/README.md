@@ -28,15 +28,15 @@ You will build **PixelMetrics 3000**, a game analytics platform that processes s
 
 ## 📁 Exercise Table
 
-| Exercise | Description                          | Directory | Deliverable File              |
-|---------:|--------------------------------------|-----------|-------------------------------|
-| 00       | Command-line fundamentals            | ex0/      | ft_command_quest.py           |
-| 01       | Score analytics using lists          | ex1/      | ft_score_analytics.py         |
-| 02       | 3D coordinate tracking with tuples  | ex2/      | ft_coordinate_system.py       |
-| 03       | Achievement tracking with sets       | ex3/      | ft_achievement_tracker.py     |
-| 04       | Inventory management with dicts      | ex4/      | ft_inventory_system.py        |
-| 05       | Data streaming with generators       | ex5/      | ft_data_stream.py             |
-| 06       | Analytics dashboard with comprehensions | ex6/   | ft_analytics_dashboard.py     |
+| Exercise | Description                             | Directory | Deliverable File              |
+|---------:|-----------------------------------------|-----------|-------------------------------|
+| 00       | Command-line fundamentals               | ex0/      | `ft_command_quest.py`         |
+| 01       | Score analytics using lists             | ex1/      | `ft_score_analytics.py`       |
+| 02       | 3D coordinate tracking with tuples      | ex2/      | `ft_coordinate_system.py`     |
+| 03       | Achievement tracking with sets          | ex3/      | `ft_achievement_tracker.py`   |
+| 04       | Inventory management with dicts         | ex4/      | `ft_inventory_system.py`      |
+| 05       | Data streaming with generators          | ex5/      | `ft_data_stream.py`           |
+| 06       | Analytics dashboard with comprehensions | ex6/      | `ft_analytics_dashboard.py`   |
 
 ---
 
