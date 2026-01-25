@@ -27,11 +27,11 @@ Como Profesional de Flujos, aprenderás a **diseñar organismos digitales y cana
 
 ## 📁 Tabla de Ejercicios
 
-| Ejercicio | Descripción                             | Directorio | Archivo a Entregar       |
-|-----------|----------------------------------------|-----------|-------------------------|
-| 00        | Fundamentos del Procesador de Datos     | ex0/      | stream_processor.py     |
-| 01        | Flujos Polimórficos                      | ex1/      | data_stream.py          |
-| 02        | Integración de la Canalización Nexus    | ex2/      | nexus_pipeline.py       |
+| Ejercicio | Descripción                            | Directorio | Archivo a Entregar      |
+|-----------|----------------------------------------|------------|-------------------------|
+| 00        | Fundamentos del Procesador de Datos    | ex0/       | `stream_processor.py`   |
+| 01        | Flujos Polimórficos                    | ex1/       | `data_stream.py`        |
+| 02        | Integración de la Canalización Nexus   | ex2/       | `nexus_pipeline.py `    |
 
 ---
 
