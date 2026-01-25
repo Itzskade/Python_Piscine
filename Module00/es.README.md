@@ -28,14 +28,14 @@ El proyecto cubre conceptos esenciales como entrada y salida de datos, variables
 
 | Ejercicio | Descripción                                         | Directorio | Archivo a entregar                          |
 |----------:|-----------------------------------------------------|------------|---------------------------------------------|
-| 00        | Mensaje de bienvenida al huerto                     | ex0/       | ft_hello_garden.py                          |
-| 01        | Cálculo del área de una parcela                     | ex1/       | ft_plot_area.py                             |
-| 02        | Suma total de cosechas                              | ex2/       | ft_harvest_total.py                         |
-| 03        | Comprobación de edad de una planta                  | ex3/       | ft_plant_age.py                             |
-| 04        | Recordatorio de riego                               | ex4/       | ft_water_reminder.py                        |
-| 05        | Contador hasta la cosecha (iterativo y recursivo)   | ex5/       | ft_count_harvest_iterative.py<br>ft_count_harvest_recursive.py |
-| 06        | Resumen del huerto                                  | ex6/       | ft_garden_summary.py                        |
-| 07        | Inventario de semillas con tipos                    | ex7/       | ft_seed_inventory.py                        |
+| 00        | Mensaje de bienvenida al huerto                     | ex0/       | `ft_hello_garden.py`                        |
+| 01        | Cálculo del área de una parcela                     | ex1/       | `ft_plot_area.py`                           |
+| 02        | Suma total de cosechas                              | ex2/       | `ft_harvest_total.py`                       |
+| 03        | Comprobación de edad de una planta                  | ex3/       | `ft_plant_age.py`                           |
+| 04        | Recordatorio de riego                               | ex4/       | `ft_water_reminder.py`                      |
+| 05        | Contador hasta la cosecha (iterativo y recursivo)   | ex5/       | `ft_count_harvest_iterative.py`<br>`ft_count_harvest_recursive.py` |
+| 06        | Resumen del huerto                                  | ex6/       | `ft_garden_summary.py`                      |
+| 07        | Inventario de semillas con tipos                    | ex7/       | `ft_seed_inventory.py`                      |
 
 ---
 
