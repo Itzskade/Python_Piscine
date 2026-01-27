@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 def artifact_sorter(artifacts: list[dict]) -> list[dict]:
-    sorted_artifacts = sorted(
+    return sorted(
         artifacts, key=lambda a: a['power'], reverse=True)
-    return sorted_artifacts
 
 
 def power_filter(mages: list[dict], min_power: int) -> list[dict]:
