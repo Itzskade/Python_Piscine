@@ -46,10 +46,10 @@ def main() -> None:
         print(f"Call {i}: {counter()}")
 
     print("\nTesting enchantment factory...")
-    sword = enchantment_factory("Flaming")
-    shield = enchantment_factory("Frozen")
-    print(sword("Sword"))
-    print(shield("Shield"))
+    flaming = enchantment_factory("Flaming")
+    frozen = enchantment_factory("Frozen")
+    print(flaming("Sword"))
+    print(frozen("Shield"))
 
     print("\nTesting spell accumulator...")
     accumulator = spell_accumulator(100)
