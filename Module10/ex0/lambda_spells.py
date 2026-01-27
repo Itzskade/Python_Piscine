@@ -3,12 +3,7 @@
 def artifact_sorter(artifacts: list[dict]) -> list[dict]:
     sorted_artifacts = sorted(
         artifacts, key=lambda a: a['power'], reverse=True)
-    i = 0
-    for i in range(len(sorted_artifacts) - 1):
-        a = sorted_artifacts[i]
-        b = sorted_artifacts[i + 1]
-    return (f"{a['name']} ({a['power']} power) comes before"
-            f"{b['name']} ({b['power']} power)")
+    return sorted_artifacts
 
 
 def power_filter(mages: list[dict], min_power: int) -> list[dict]:
